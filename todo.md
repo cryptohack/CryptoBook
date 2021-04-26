@@ -30,7 +30,7 @@ Mainly thinking things like
 * Prime decomposition and distribution
 * Euler's theorem
 * Factoring
-* Legrange / Jacobi symbol
+* Legendre / Jacobi symbol
 
 #### Group Theory
 
