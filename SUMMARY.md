@@ -1,9 +1,9 @@
 # Table of contents
 
 * [CryptoBook](README.md)
-* [Rough Plan](todo.md)
-* [Style Guide](style-guide.md)
-* [Sample Page](sample-page.md)
+* [Book Plan](todo.md)
+* [Style Guide](style-guide/README.md)
+  * [Sample Page](style-guide/sample-page.md)
 
 ## Fundamentals
 
@@ -15,7 +15,7 @@
 
 ## Group Theory
 
-* [Untitled](group-theory/untitled.md)
+* [Discrete Log Problem](group-theory/untitled.md)
 
 ## Elliptic Curves
 
@@ -28,5 +28,13 @@
 ## Lattices
 
 * [Definitions](lattices/definitions.md)
-* [Shortest vector problem](lattices/shortest-vector-problem.md)
+* [LLL reduction](lattices/lll-reduction/README.md)
+  * [Gram-Schmidt Orthogonalization](lattices/lll-reduction/gram-schmidt-orthogonalization.md)
+  * [Gaussian Reduction](lattices/lll-reduction/gaussian-reduction.md)
+  * [LLL reduction](lattices/lll-reduction/lll-reduced-basis.md)
+* [Reduced Basis](lattices/shortest-vector-problem.md)
+
+## Block Ciphers
+
+* [AES](block-ciphers/aes.md)
 

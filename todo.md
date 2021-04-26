@@ -2,11 +2,19 @@
 description: A summary we plan to cover
 ---
 
-# Rough Plan
+# Book Plan
 
-## Overview
+### Philosophy
 
-Creating this chapter as a simple check list for topics that I think should be covered. I'm going to split topics between "background", which should cover general mathematics and "attacks" which should be split between protocols.
+The aim of CryptoBook is to have a consolidated space for all of the mathematics required to properly learn and enjoy cryptography. The focus of any topic should be to introduce a reader to a subject in a way that is fun, engaging and with an attempt to frame it as an applied resource.
+
+The second focus should be to cleanly implement the various topics using SageMath, so that there is a clear resource for a new reader to gain insight on how SageMath might be used to create the objects needed.
+
+{% hint style="info" %}
+Descriptions of attacks against crypto systems are strongly encouraged, however full SageMath implementations should not be included, as this has the potential for destroying CryptoHack challenges, or making all attacks known by so many people that CTFs become a total nightmare!! 
+{% endhint %}
+
+### Proposed topics
 
 This list is **not complete** so please add to it as you see fit.
 
@@ -54,9 +62,9 @@ Mainly thinking things like:
   * [Thesis on the topic](https://www.math.leidenuniv.nl/scripties/Broker.pdf)
   * Sage implementation [ChiCube's script](https://gist.github.com/ChiCubed/0977601c9ce88eda03b9d2576231192e)
 
-#### Hyperellipic curves
+#### Hyperelliptic curves
 
-* Generalisation of elliptic curves
+* Generalization of elliptic curves
 * Recovering a group structure using the Jacobian
 * Example: genus one curves, jacobian is isomorphic to the set of points
 * Mumford representation of divisors
@@ -67,7 +75,23 @@ Mainly thinking things like:
 
 * Textbook protocol
 * Padding
+  * Bleichenbacher's Attack
+  * OAEP
 * Coppersmith
+  * Håstad's Attack
+  * Franklin-Reiter Attack
+* Wiener's Attack
+
+
+
+#### Diffie-Hellman
+
+* Textbook protocol
+* Strong primes, and why
+
+
+
+
 
 
 
