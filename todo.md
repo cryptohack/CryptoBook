@@ -24,6 +24,7 @@ This list is **not complete** so please add to it as you see fit.
 * Congruences
 * GCD, LCM
 * Euclid's algorithm
+* Modular Arithmetic
 * Morphisms et al. 
 * Frobenius endomorphism
 
