@@ -2,6 +2,7 @@
 
 * [CryptoBook](README.md)
 * [Rough Plan](todo.md)
+* [Style Guide](style-guide.md)
 * [Sample Page](sample-page.md)
 
 ## Fundamentals
