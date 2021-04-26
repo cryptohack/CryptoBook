@@ -10,9 +10,11 @@ Give a description of the topic, and what you hope the reader will get from this
 
 ### Addition
 
-For all natural numbers, the addition operation obeys
+For all natural numbers, the addition operation is
 
-* Associativity: $a + \(b + c\)$ = $\(a + b\) + c$
+* Associative: $$a + \(b + c\) = \(a + b\) + c$$ 
+* Commutative: $$a + b = b + a$$
+* Distributive: $a\(b + c\) = ab + ac$
 
 
 
