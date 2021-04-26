@@ -10,11 +10,7 @@ Creating this chapter as a simple check list for topics that I think should be c
 
 This list is **not complete** so please add to it as you see fit.
 
-### Background
-
-#### General
-
-Probably can have a better title...
+#### Fundamentals
 
 * Groups, Rings, Fields, etc.
 * Congruences
@@ -67,13 +63,11 @@ Mainly thinking things like:
 * Computing the order of the Jacobian
   * [For characteristic 2^n: Example 56](https://www.math.uwaterloo.ca/~ajmeneze/publications/hyperelliptic.pdf)
 
-### Attacks
+#### RSA
 
-#### Elliptic Curves
+* Textbook protocol
+* Padding
+* Coppersmith
 
-* Why Elliptic: show conic sections are weak
-* Smart's attack
-* Pairing attacks 
-* Singular curves 
-* Weil Descent Attack [https://eprint.iacr.org/2004/240.pdf](https://eprint.iacr.org/2004/240.pdf)
+
 
