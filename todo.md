@@ -8,7 +8,7 @@ description: A summary we plan to cover
 
 Creating this chapter as a simple check list for topics that I think should be covered. I'm going to split topics between "background", which should cover general mathematics and "attacks" which should be split between protocols.
 
-Please add to this list freely and we can work through it however we can
+This list is **not complete** so please add to it as you see fit.
 
 ### Background
 
