@@ -6,7 +6,7 @@ description: TODO
 
 ## General Tips
 
-* Introduce new objects slowly, if many things need to be assumed, then try to plan form the to appear within the [Book Plan](../todo.md) somewhere
+* Introduce new objects slowly, if many things need to be assumed, then try to plan for them to appear within the [Book Plan](../todo.md) somewhere. 
 * It is better to cover less, and explain something well, than it is to quickly cover a lot. We're not racing
 * When explaining anything, imagine you are introducing it for a first time. Summaries exist elsewhere online, the goal of CryptoBook is education
 * Contribute as much or as little as you want, but try to only work on topics that
