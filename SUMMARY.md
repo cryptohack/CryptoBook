@@ -16,6 +16,7 @@
 ## Group Theory
 
 * [Discrete Log Problem](group-theory/untitled.md)
+* [Diffie-Hellman](group-theory/diffie-hellman.md)
 
 ## Elliptic Curves
 
