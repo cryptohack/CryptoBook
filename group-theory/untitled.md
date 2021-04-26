@@ -12,11 +12,11 @@ we can attempt to compute the value $$x$$using SageMath by calling `b.log(a)`.
 
 Depending on the group we consider, SageMath will call different functions internally. This section is devoted to helping the reader understand which functions are called when. We focus here on when we work in the group $$F_n^{\star}$$ for some integer $$n$$. For solving the discrete log problem for points on an elliptic curve, see **\(Missing Resource\).**
 
-When $$n$$ is composite and not a prime power, `discrete_log()` will be used, which uses generic algorithms to solve DLP \(eg. pohlig-hellman and baby-step giant-step\).
+When $$n$$ is composite and not a prime power, `discrete_log()` will be used, which uses generic algorithms to solve DLP \(e.g. Pohlig-Hellman and baby-step giant-step\).
 
 When $$n=p$$is a prime, Pari `znlog` will be used, which uses a linear sieve index calculus method, suitable for $$p < 10^{50} \sim 2 ^{166}$$.
 
-When $$n = p^k$$, SageMath will fall back on the generic implementation `discrete_log()`which can be slow. However, Pari `znlog` can handle, again using the linear sieve index calculus method. To call this within SageMath we can use
+When $$n = p^k$$, SageMath will fall back on the generic implementation `discrete_log()`which can be slow. However, Pari `znlog` can handle this as well, again using the linear sieve index calculus method. To call this within SageMath we can use
 
 ```python
 x = int(pari(f"znlog({int(b)},Mod({int(a)},{int(n)}))"))  
@@ -24,7 +24,7 @@ x = int(pari(f"znlog({int(b)},Mod({int(a)},{int(n)}))"))
 
 #### Example
 
-When we pick a small prime, we can compare the Pari method with the SageDefault
+Given a small prime, we can compare the Pari method with the Sage defaults
 
 ```python
 p = getPrime(36)
@@ -49,7 +49,7 @@ time discrete_log(b,a)
 # 123456789
 ```
 
-However, picking a large prime, we find we can solve this problem even with larger primes in a very short time
+We can also solve this problem with even larger primes in a very short time
 
 ```python
 p = getPrime(100)
