@@ -10,6 +10,10 @@ The aim of CryptoBook is to have a consolidated space for all of the mathematics
 
 The second focus should be to cleanly implement the various topics using SageMath, so that there is a clear resource for a new reader to gain insight on how SageMath might be used to create the objects needed.
 
+{% hint style="success" %}
+Write about what you love and this book will be a success. 
+{% endhint %}
+
 {% hint style="info" %}
 Descriptions of attacks against crypto systems are strongly encouraged, however full SageMath implementations should not be included, as this has the potential for destroying CryptoHack challenges, or making all attacks known by so many people that CTFs become a total nightmare!! 
 {% endhint %}
