@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Our Goal](README.md)
+* [CryptoBook](README.md)
+* [TODO](todo.md)
 
