@@ -4,7 +4,7 @@ description: A summary we plan to cover
 
 # Book Plan
 
-### Philosophy
+## Philosophy
 
 The aim of CryptoBook is to have a consolidated space for all of the mathematics required to properly learn and enjoy cryptography. The focus of any topic should be to introduce a reader to a subject in a way that is fun, engaging and with an attempt to frame it as an applied resource.
 
@@ -14,9 +14,11 @@ The second focus should be to cleanly implement the various topics using SageMat
 Descriptions of attacks against crypto systems are strongly encouraged, however full SageMath implementations should not be included, as this has the potential for destroying CryptoHack challenges, or making all attacks known by so many people that CTFs become a total nightmare!! 
 {% endhint %}
 
-### Proposed topics
+## Proposed topics
 
 This list is **not complete** so please add to it as you see fit.
+
+### Mathematical Background
 
 #### Fundamentals
 
@@ -51,7 +53,8 @@ Mainly thinking things like:
 * Edwards
 * Counting points \(Schoof's algorithm\)
 * Complex multiplication
-  * [Good reference, thanks Joachim](https://crypto.stanford.edu/pbc/thesis.pdf)
+  * [Good reference, thanks Joachim](https://crypto.stanford.edu/pbc/thesis.pdf)\*\*\*\*
+* Isogenys
 
 **Generating Elliptic Curves**
 
@@ -71,6 +74,9 @@ Mainly thinking things like:
 * Mumford representation of divisors
 * Computing the order of the Jacobian
   * [For characteristic 2^n: Example 56](https://www.math.uwaterloo.ca/~ajmeneze/publications/hyperelliptic.pdf)
+  * Hyper Metroid example
+
+### Asymmetric Cryptography
 
 #### RSA
 
@@ -83,20 +89,27 @@ Mainly thinking things like:
   * Franklin-Reiter Attack
 * Wiener's Attack
 
-
-
 #### Diffie-Hellman
 
 * Textbook protocol
 * Strong primes, and why
 
+#### Elliptic Curve Cryptography
 
+* ECDSA
+* EdDSA
+
+#### Isogeny Based Cryptography
+
+* SIDH
+* SIKE
+* BIKE
+
+### Symmetric Cryptography
 
 **Block Ciphers**
 
 * AES
-
-
 
 **Stream Ciphers**
 

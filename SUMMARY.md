@@ -38,3 +38,7 @@
 
 * [AES](block-ciphers/aes.md)
 
+## Isogeny Based Cryptography
+
+* [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
+
