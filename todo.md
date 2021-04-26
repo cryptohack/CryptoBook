@@ -98,5 +98,10 @@ Mainly thinking things like:
 
 
 
+**Stream Ciphers**
+
+* Affine
+* RC4
+
 
 
