@@ -14,7 +14,7 @@ For all natural numbers, the addition operation is
 
 * Associative: $$a + \(b + c\) = \(a + b\) + c$$ 
 * Commutative: $$a + b = b + a$$
-* Distributive: $a\(b + c\) = ab + ac$
+* Distributive: $$a\(b + c\) = ab + ac$$
 
 
 
