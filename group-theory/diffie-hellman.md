@@ -41,7 +41,9 @@ Here's a brief explanation of the code:
 * Bob's public key is $$g^b \mod p$$ 
 * Their shared key is $$g^{ab} \equiv (g^a)^b \equiv (g^b)^a \pmod p$$ 
 
+{% hint style="info" %}
 So anybody observing the messages sent between Alice and Bob would see $$p, g, g^a, g^b$$, but they wouldn't be able to calculate the shared key $$g^{ab}$$.
+{% endhint %}
 
 This is because given $$g$$ and $$g^a$$, it should be infeasible to calculate $$a$$. If this sounds familiar, that's because it's the [Discrete Log Problem](untitled.md).
 
