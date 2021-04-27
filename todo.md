@@ -139,5 +139,18 @@ Mainly thinking things like:
 * Affine
 * RC4
 
+**Hashes**
+
+* SHA family
+
+### Cryptographic Protocols
+
+#### Zero-knowledge proofs
+
+* Schnorr proof of knowledge for dlog
+* Core definitions
+* Proof of equality of dlog
+* Proof of knowledge of a group homomorphism preimage
+
 
 

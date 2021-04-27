@@ -11,7 +11,7 @@
 
 ## Number Theory
 
-* [Untitled](number-theory/untitled.md)
+* [Division and Greatest common divisor](number-theory/untitled.md)
 
 ## Group Theory
 
@@ -42,4 +42,8 @@
 ## Isogeny Based Cryptography
 
 * [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
+
+## Hashes
+
+* [Introduction / overview](hashes/introduction-overview.md)
 
