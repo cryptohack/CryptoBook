@@ -58,7 +58,7 @@ Mainly thinking things like:
 * Counting points \(Schoof's algorithm\)
 * Complex multiplication
   * [Good reference, thanks Joachim](https://crypto.stanford.edu/pbc/thesis.pdf)\*\*\*\*
-* Isogenys
+* Isogenies
 
 **Generating Elliptic Curves**
 
