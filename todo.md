@@ -93,6 +93,19 @@ Mainly thinking things like:
   * Håstad's Attack
   * Franklin-Reiter Attack
 * Wiener's Attack
+* RSA Digital Signature Scheme
+* RSA with Chinese Remainder Theorem \(CRT\)
+  * [Fault Attack on RSA-CRT](https://eprint.iacr.org/2002/073.pdf)
+  * [Bellcore Attack \(Low Voltage Attack\)](https://eprint.iacr.org/2012/553.pdf)
+
+#### Paillier Cryptosystem
+
+* Textbook protocol
+
+#### ElGamal Encryption System
+
+* Textbook protocol
+* ElGamal Digital Signature Scheme
 
 #### Diffie-Hellman
 
