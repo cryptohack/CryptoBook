@@ -40,13 +40,28 @@ $$
 \begin{align}
     c^d  &\equiv (m^e)^d &&\mod n \\
     m &\equiv m^{ed} &&\mod n \\
-    m &\equiv m^{k\phi + 1} &&\mod n \\
+    m &\equiv m^{ACk\phi + 1} &&\mod n \\
     m &\equiv m^{k\phi} m &&\mod n \\
     m &\equiv (m^\phi)^km &&\mod n \\
     m &\equiv 1^km &&\mod n \\
     m &\equiv m &&\mod n \\
 \end{align}
 $$
+
+When the requirement $$\gcd(m, n) = 1$$does not hold, we can instead look at the equivalences modulo $$p$$and $$q$$respectively. Clearly, when $$\gcd(m, n) = n,$$we have that $$c \equiv m \equiv 0 \mod n$$and our correctness still holds. Now, consider the case $$m = k\cdot p,$$where we have that $$c \equiv m \equiv 0 \mod p$$and $$c^d \equiv (m^e)^d \pmod q.$$Since we have already excluded the case that $$\gcd(m, q) = q,$$we can conclude that $$\gcd(m, q) = 1,$$as $$q$$is prime. This means that $$m^{\ell\phi(q)} \equiv 1 \mod q$$and by the multiplicative properties of the $$\phi$$function, we determine that $$m^{\ell_n\phi(n)} = m^{\ell\phi(q)} \equiv 1 \mod q.$$We conclude by invoking the Chinese Remainder theorem with
+
+
+
+$$
+\begin{align*}
+m &\equiv 0 &&\mod p \\
+m &\equiv 1^\ell m &&\mod q\\
+\end{align*}
+$$
+
+ that $$m^{e\cdot d} \equiv m \mod n.$$The case for $$m = k\cdot q$$follows in a parallel manner.
+
+
 
 ## Python Implementation
 
