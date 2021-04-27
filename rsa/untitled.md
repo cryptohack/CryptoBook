@@ -18,7 +18,7 @@ def generate_keys():
 
     n = p * q
     public_key = (n, e)
-    private_key = (n, e, d)
+    private_key = (n, d)
     return public_key, private_key
 
 
@@ -28,7 +28,7 @@ def encrypt(plaintext: int, public_key) -> int:
 
 
 def decrypt(ciphertext: int, private_key) -> int:
-    n, e, d = private_key
+    n, d = private_key
     return pow(ciphertext, d, n)
 
 
@@ -45,7 +45,7 @@ To summarize:
 * Using $$p$$ and $$q$$, we calculate Euler's totient $$\phi$$
 * We compute the private exponent $$d \equiv e^{-1} \mod \phi$$ and check that it exists
 * Public key: $$n, e$$
-* Private key: $$n, e, d$$
+* Private key: $$n, d$$
 * We can encrypt a plaintext $$m$$ and receive a ciphertext $$c \equiv m^e \mod n$$
 * We can decrypt a ciphertext $$c$$ with $$m \equiv c^d \mod n$$
 
