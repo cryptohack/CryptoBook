@@ -16,25 +16,25 @@ To summarize:
 
 ## Proof of Correctness
 
-We now consider $$c^d = m^{ed} = m$$necessary for the successful decrption of an RSA ciphertext. The core of this result is due to Euler's theorem which states
+We now consider $$c^d = m^{ed} = m$$necessary for the successful decrption of an RSA ciphertext. The core of this result is due to [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem) which states
 
 $$
 a^{\phi(n)} \equiv 1 \mod n
 $$
 
-for all coprime integers $$(a,n)$$ and $$\phi(n)$$ is Eluer's totient function.
+for all coprime integers $$(a,n)$$ and $$\phi(n)$$ is [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function).
 
 {% hint style="info" %}
 As a reminder, we say two integers are coprime if they share no non-trivial factors. This is the same statement that $$\gcd(a,n)=1$$.
 {% endhint %}
 
-From the defintion of the protocol, we have that
+From the definition of the protocol, we have that
 
 $$
 ed \equiv 1 \mod \phi(n), \;\; \Rightarrow \;\; ed = 1 + k\phi(n)
 $$
 
-for some $$k \in \mathbb{Z}$$. Combining this with Euler's theorem, we see that we recover $$m$$from the cipher text
+for some $$k \in \mathbb{Z}$$. Combining this with Euler's theorem, we see that we recover $$m$$from the ciphertext
 
 $$
 \begin{align}
