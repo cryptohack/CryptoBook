@@ -41,6 +41,7 @@ Let $$\mathbb{Z} = \{\dots , -1, 0, 1, 2, 3 \dots \}$$be the set denoting the in
 ```python
 from Crypto.Util.number import GCD
 print(GCD(18, 12)) # -> 6
+print(gcd(18, 12)) # -> 6 - SageMath has gcd
 ```
 
 ### Ideals \(optional\)
