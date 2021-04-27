@@ -8,10 +8,9 @@
 ## Fundamentals
 
 * [Mathematical Notation](fundamentals/untitled.md)
+* [Division and Greatest common divisor](fundamentals/untitled-1.md)
 
 ## Number Theory
-
-* [Division and Greatest common divisor](number-theory/untitled.md)
 
 ## Group Theory
 
