@@ -4,6 +4,15 @@ description: TODO
 
 # Style Guide
 
+## Working together
+
+* If something doesnt make sense, make a comment using GitBook, or ask in the Discord.
+* If you are confident that something is wrong, just fix it. There's no need to ask. 
+* If you think something doesnt have enough detail, expand on it, or leave a comment suggesting that.
+* If a page is getting too long, break it down into new pages. If you're unsure, then leave a comment or talk in the discord
+* If you want to write about something new and learn as you type, this is fine! But **please** leave a warning at the top that this is new to you and needs another pair of eyes.
+* If there's big subject you're working on, claim the page and save it, show us that that's what you're doing so we don't overlap too much
+
 ## General Tips
 
 * Introduce new objects slowly, if many things need to be assumed, then try to plan for them to appear within the [Book Plan](../todo.md) somewhere. 
