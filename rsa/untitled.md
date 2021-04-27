@@ -1,6 +1,14 @@
+---
+description: >-
+  Will be introduced in this page the fundamentals of RSA, mathematical
+  requirement and also some application with python and openSSL.
+---
+
 # Introduction to RSA
 
-RSA is a public-key cryptosystem widely used in the world today to provide a secure transmission system to millions of communications and is one of the oldest such systems in existence.
+### I- Introduction:
+
+RSA is a [public-key cryptosystem](https://en.wikipedia.org/wiki/Public-key_cryptography) that is widely used in the world today to provide a secure transmission system to millions of communications, is one of the oldest such systems in existence.  The [acronym](https://en.wikipedia.org/wiki/Acronym) **RSA** comes from the surnames of [Ron Rivest](https://en.wikipedia.org/wiki/Ron_Rivest), [Adi Shamir](https://en.wikipedia.org/wiki/Adi_Shamir), and [Leonard Adleman](https://en.wikipedia.org/wiki/Leonard_Adleman), who publicly described the algorithm in 1977. An equivalent system was developed secretly, in 1973 at [GCHQ](https://en.wikipedia.org/wiki/Government_Communications_Headquarters) \(the British [signals intelligence](https://en.wikipedia.org/wiki/Signals_intelligence) agency\), by the English mathematician [Clifford Cocks](https://en.wikipedia.org/wiki/Clifford_Cocks). That system was [declassified](https://en.wikipedia.org/wiki/Classified_information) in 1997.
 
 All public-key systems are based on the concept of [_trapdoor functions_](https://en.wikipedia.org/wiki/Trapdoor_function#:~:text=A%20trapdoor%20function%20is%20a,are%20widely%20used%20in%20cryptography.), functions that are simple to compute in one direction but computationally hard to reverse without knowledge of some special information called the _trapdoor_. In RSA, the trapdoor function is based on the [hardness of factoring integers](https://en.wikipedia.org/wiki/Integer_factorization). The function involves the use of a public key$$N $$to encrypt data, which is \(supposed to be\) encrypted in such a way that the function cannot be reversed without knowledge of the prime factorisation of$$N $$, something that should be kept private. Except in certain cases, there exists no efficient algorithm for factoring huge integers.
 
@@ -8,19 +16,75 @@ All public-key systems are based on the concept of [_trapdoor functions_](https:
 Formalize the introduction and include a discussion of the security based on the hardness of factoring integers.
 {% endhint %}
 
-To summarize:
+### II- Arithmetic for RSA
+
+Before starting to introducing you RSA, a few arithmetic notions need to be introduce to understand perfectly other steps.
+
+### III- Key generation
 
 * We pick two primes $$p$$ and $$q$$
-* Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and it's Euler's totient $$\phi(n) = (p-1)*(q-1)$$
-* We compute the private exponent $$d \equiv e^{-1} \mod \phi(n)$$ and check that it exists
-* Public key: $$n, e$$
-* Private key: $$n, d$$
-* We can encrypt a plaintext $$m$$ and receive a ciphertext $$c \equiv m^e \mod n$$
-* We can decrypt a ciphertext $$c$$ with $$m \equiv c^d \mod n$$
+* Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and it's **Euler's totient** $$\phi(n) = (p-1)*(q-1)$$
+* Now, chose the **public exponent** $$\mathbb{e}$$such as $$\mathbb{gcd(e, \phi(n)) = 1}$$
+* By using the **Euclid extend algorithm**, we compute the invert $$\mathbb{d}$$ of $$\mathbb{e \mod n}$$ :$$d \equiv e^{-1} \mod \phi(n)$$. Which is our **privet exponent**.
+* **Public key**: $$n, e$$
+* **Private key**: $$n, d$$
+* Now, chose a **message** $$\mathbb{m}$$that you convert into integers
+* We can encrypt this **plaintext** $$m$$ and receive a **ciphertext** $$c \equiv m^e \mod n$$
+* We can decrypt a **ciphertext** $$c$$ with $$m \equiv c^d \mod n$$
+
+### IV- Signature 
+
+### V- Format
+
+### VI- Application: pycryptodome and openSSL
+
+#### Pycryptodome:
+
+Pycryptodome is a python library about cryptography, see the documentation below: [https://www.pycryptodome.org/en/latest/](https://www.pycryptodome.org/en/latest/) There is an example of RSA key generation with pycryptodome:
+
+```python
+from Crypto.Util.number import getPrime, bytes_to_long
+
+
+def generate_keys():
+    e = 0x10001    #public exponent e, we generally use this one by default
+    while True:
+        p = getPrime(512)
+        q = getPrime(512)
+        phi = (p - 1) * (q - 1)    #Euler's totient 
+        d = pow(e, -1, phi)    #Private exponent d
+        if d != -1:
+            break
+
+    n = p * q
+    public_key = (n, e)
+    private_key = (n, d)
+    return public_key, private_key
+
+
+def encrypt(plaintext: int, public_key) -> int:
+    n, e = public_key
+    return pow(plaintext, e, n)    #plaintext ** e mod n
+
+
+def decrypt(ciphertext: int, private_key) -> int:
+    n, d = private_key
+    return pow(ciphertext, d, n)   #ciphertext ** d mod n
+
+
+message = bytes_to_long(b"super_secret_message")
+public_key, private_key = generate_keys()
+ciphertext = encrypt(message, public_key)
+plaintext = decrypt(ciphertext, private_key)
+```
+
+#### OpenSSL:
+
+OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security \(TLS\) and Secure Sockets Layer \(SSL\) protocols. It is also a general-purpose cryptography library
 
 ## Proof of Correctness
 
-We now consider $$c^d = m^{ed} = m$$necessary for the successful decrption of an RSA ciphertext. The core of this result is due to [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem) which states
+We now consider $$c^d = m^{ed} = m$$necessary for the successful description of an RSA ciphertext. The core of this result is due to [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem) which states
 
 $$
 a^{\phi(n)} \equiv 1 \mod n
@@ -66,43 +130,4 @@ $$
  that $$m^{e\cdot d} \equiv m \mod n.$$The case for $$m = k\cdot q$$follows in a parallel manner.
 
 
-
-## Python Implementation
-
-```python
-from Crypto.Util.number import getPrime, bytes_to_long
-
-
-def generate_keys():
-    e = 0x10001
-    while True:
-        p = getPrime(512)
-        q = getPrime(512)
-        phi = (p - 1) * (q - 1)
-        d = pow(e, -1, phi)
-        if d != -1:
-            break
-
-    n = p * q
-    public_key = (n, e)
-    private_key = (n, d)
-    return public_key, private_key
-
-
-def encrypt(plaintext: int, public_key) -> int:
-    n, e = public_key
-    return pow(plaintext, e, n)
-
-
-def decrypt(ciphertext: int, private_key) -> int:
-    n, d = private_key
-    return pow(ciphertext, d, n)
-
-
-message = bytes_to_long(b"super_secret_message")
-public_key, private_key = generate_keys()
-ciphertext = encrypt(message, public_key)
-plaintext = decrypt(ciphertext, private_key)
-assert plaintext == message
-```
 
