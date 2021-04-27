@@ -39,12 +39,12 @@ for some $$k \in \mathbb{Z}$$. Combining this with Euler's theorem, we see that 
 $$
 \begin{align}
     c^d  &\equiv (m^e)^d &&\mod n \\
-    m &\equiv m^{ed} &&\mod n \\
-    m &\equiv m^{k\phi + 1} &&\mod n \\
-    m &\equiv m^{k\phi} m &&\mod n \\
-    m &\equiv (m^\phi)^km &&\mod n \\
-    m &\equiv 1^km &&\mod n \\
-    m &\equiv m &&\mod n \\
+     &\equiv m^{ed} &&\mod n \\
+     &\equiv m^{k\phi + 1} &&\mod n \\
+     &\equiv m^{k\phi} m &&\mod n \\
+     &\equiv (m^\phi)^km &&\mod n \\
+     &\equiv 1^km &&\mod n \\
+     &\equiv m &&\mod n \\
 \end{align}
 $$
 
