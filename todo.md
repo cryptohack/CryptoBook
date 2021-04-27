@@ -39,6 +39,7 @@ This list is **not complete** so please add to it as you see fit.
 Mainly thinking things like
 
 * Prime decomposition and distribution
+* Primality testing
 * Euler's theorem
 * Factoring
 * Legendre / Jacobi symbol
