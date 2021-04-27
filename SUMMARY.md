@@ -24,7 +24,7 @@
 
 ## RSA
 
-* [Overview](rsa/untitled.md)
+* [Introduction to RSA](rsa/untitled.md)
 
 ## Lattices
 
