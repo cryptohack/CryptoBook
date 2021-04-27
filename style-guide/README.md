@@ -12,6 +12,7 @@ description: TODO
 * Contribute as much or as little as you want, but try to only work on topics that
   * You are interested in
   * You have some experience of thinking about
+* External resources should be included at the end of the page. Ideally the book should be self-contained \(within reason\) but other resources are great as they offer other ways to learn
 
 {% hint style="warning" %}
 If anything on any page is unclear, then please leave a comment, or talk in the discord. We are all at different levels, and I want this to be useful for everyone. Let's work on this as a big team and create something beautiful.
