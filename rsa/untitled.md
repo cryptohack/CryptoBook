@@ -1,6 +1,6 @@
 # Introduction to RSA
 
-RSA is a public-key cryptosystem widely used in the world today to provide a secure transmission system to millions of communications and was one of the oldest such systems in existence.
+RSA is a public-key cryptosystem widely used in the world today to provide a secure transmission system to millions of communications and is one of the oldest such systems in existence.
 
 All public-key systems are based on the concept of [_trapdoor functions_](https://en.wikipedia.org/wiki/Trapdoor_function#:~:text=A%20trapdoor%20function%20is%20a,are%20widely%20used%20in%20cryptography.), functions that are simple to compute in one direction but computationally hard to reverse without knowledge of some special information called the _trapdoor_. In RSA, the trapdoor function is based on the [hardness of factoring integers](https://en.wikipedia.org/wiki/Integer_factorization). The function involves the use of a public key$$N $$to encrypt data, which is \(supposed to be\) encrypted in such a way that the function cannot be reversed without knowledge of the prime factorisation of$$N $$, something that should be kept private. Except in certain cases, there exists no efficient algorithm for factoring huge integers.
 
