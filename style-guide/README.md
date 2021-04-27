@@ -53,7 +53,7 @@ Motivating a new reader is the biggest challenge of creating a resource. People 
 There's no "right or wrong" but it's good to be consistent, I think?
 
 * All maths must be presented using $$\LaTeX$$using either both block and inline
-* Add more here... 
+* We seem to be using `mathbb` for our fields / rings. So let's stick with that? Maybe someone has a good resource for notation we can work from?
 
 ### Code Blocks
 
