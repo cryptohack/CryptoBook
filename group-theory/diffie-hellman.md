@@ -15,7 +15,7 @@ class DiffieHellman:
     def __init__(self, p: int):
         self.p = p
         self.g = 5
-        self.private_key = crr.getrandbits(128)
+        self.private_key = crr.randrange(2, p-1)
 
     def public_key(self) -> int:
         return pow(self.g, self.private_key, self.p)
@@ -34,12 +34,12 @@ assert shared_key == alice.shared_key(bob.public_key())
 
 Here's a brief explanation of the code:
 
-* We choose a prime $$p$$ 
-* Alice picks a private key $$a$$
-* Bob picks a private key $$b$$ 
-* Alice's public key is $$g^a$$ 
-* Bob's public key is $$g^b$$ 
-* Their shared key is $$g^{ab} = (g^a)^b = (g^b)^a$$ 
+* We choose a prime $$p$$ and a generator $$g \in \mathbb{F}_p$$
+* Alice picks a private key $$a \in \mathbb{Z}_{p-1}$$
+* Bob picks a private key $$b \in \mathbb{Z}_{p-1}$$ 
+* Alice's public key is $$g^a \mod p$$ 
+* Bob's public key is $$g^b \mod p$$ 
+* Their shared key is $$g^{ab} \equiv (g^a)^b \equiv (g^b)^a \pmod p$$ 
 
 So anybody observing the messages sent between Alice and Bob would see $$p, g, g^a, g^b$$, but they wouldn't be able to calculate the shared key $$g^{ab}$$.
 
