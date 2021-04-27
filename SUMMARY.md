@@ -51,3 +51,8 @@
 
 * [Introduction / overview](hashes/introduction-overview.md)
 
+## Symmetric Cryptography
+
+* [The One Time Pad](symmetric-cryptography/the-one-time-pad.md)
+* [Untitled](symmetric-cryptography/untitled.md)
+
