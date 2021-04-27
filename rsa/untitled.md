@@ -7,7 +7,7 @@ Formalise the introduction and include a discussion of the secuirty based on the
 To summarize:
 
 * We pick two primes $$p$$ and $$q$$
-* Using $$p$$ and $$q$$, we calculate Euler's totient $$\phi$$
+* Using $$p$$ and $$q$$, we calculate modulus $$N = p*q$$ and it's Euler's totient $$\phi = (p-1)*(q-1)$$
 * We compute the private exponent $$d \equiv e^{-1} \mod \phi$$ and check that it exists
 * Public key: $$n, e$$
 * Private key: $$n, d$$
