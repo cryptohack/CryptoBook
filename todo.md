@@ -125,6 +125,11 @@ Mainly thinking things like:
 
 ### Symmetric Cryptography
 
+#### One Time Pad
+
+* XOR and its properties
+* XOR as One Time Pad
+
 **Block Ciphers**
 
 * AES
