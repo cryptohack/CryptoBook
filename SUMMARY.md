@@ -7,11 +7,15 @@
 
 ## Fundamentals
 
-* [Mathematical Notation](fundamentals/untitled.md)
+* [Mathematical Notation](fundamentals/notation.md)
 * [Division and Greatest common divisor](fundamentals/untitled-1/README.md)
   * [Euclidean Algorithm](fundamentals/untitled-1/euclidean-algorithm.md)
 
 ## Number Theory
+
+---
+
+* [Ideals](ideals.md)
 
 ## Group Theory
 
