@@ -40,7 +40,7 @@ $$
 \begin{align}
     c^d  &\equiv (m^e)^d &&\mod n \\
     m &\equiv m^{ed} &&\mod n \\
-    m &\equiv m^{ACk\phi + 1} &&\mod n \\
+    m &\equiv m^{k\phi + 1} &&\mod n \\
     m &\equiv m^{k\phi} m &&\mod n \\
     m &\equiv (m^\phi)^km &&\mod n \\
     m &\equiv 1^km &&\mod n \\
