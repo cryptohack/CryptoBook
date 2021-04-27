@@ -1,14 +1,14 @@
 # Introduction to RSA
 
 {% hint style="danger" %}
-Formalise the introduction and include a discussion of the secuirty based on the hardness of factoring integers.
+Formalize the introduction and include a discussion of the security based on the hardness of factoring integers.
 {% endhint %}
 
 To summarize:
 
 * We pick two primes $$p$$ and $$q$$
-* Using $$p$$ and $$q$$, we calculate modulus $$N = p*q$$ and it's Euler's totient $$\phi = (p-1)*(q-1)$$
-* We compute the private exponent $$d \equiv e^{-1} \mod \phi$$ and check that it exists
+* Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and it's Euler's totient $$\phi(n) = (p-1)*(q-1)$$
+* We compute the private exponent $$d \equiv e^{-1} \mod \phi(n)$$ and check that it exists
 * Public key: $$n, e$$
 * Private key: $$n, d$$
 * We can encrypt a plaintext $$m$$ and receive a ciphertext $$c \equiv m^e \mod n$$
