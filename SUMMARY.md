@@ -8,7 +8,8 @@
 ## Fundamentals
 
 * [Mathematical Notation](fundamentals/untitled.md)
-* [Division and Greatest common divisor](fundamentals/untitled-1.md)
+* [Division and Greatest common divisor](fundamentals/untitled-1/README.md)
+  * [Euclidean Algorithm](fundamentals/untitled-1/euclidean-algorithm.md)
 
 ## Number Theory
 

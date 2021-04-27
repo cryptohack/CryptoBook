@@ -17,8 +17,8 @@ Let $$\mathbb{Z} = \{\dots , -1, 0, 1, 2, 3 \dots \}$$be the set denoting the in
 **Properties**
 
 * $$a | a, \ 1 | a \text{ and } a | 0$$
-* $$a | b$$ and $$ a | c $$ imples $$a | (b + c)$$
-* $$a | b$$ and $$ b | c $$ imples $$ a | c$$
+* $$a | b$$ and $$ a | c $$ implies $$a | (b + c)$$
+* $$a | b$$ and $$ b | c $$ implies $$ a | c$$
 
 **Definition - Division with remainder**
 
