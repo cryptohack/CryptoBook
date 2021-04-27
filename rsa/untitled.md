@@ -49,12 +49,31 @@ To summarize:
 * We can encrypt a plaintext $$m$$ and receive a ciphertext $$c \equiv m^e \mod n$$
 * We can decrypt a ciphertext $$c$$ with $$m \equiv c^d \mod n$$
 
-Here's a brief explanation of why the decryption works:
+## Proof of Correctness
+
+We now consider $$c^d = m^{ed} = m$$necessary for the successful decrption of an RSA ciphertext. The core of this is due to Euler's theorem which states
+
+$$
+a^{\phi(n)} \equiv 1 \mod n
+$$
+
+for all coprime integers $$(a,n)$$.
+
+{% hint style="info" %}
+As a reminder, we say two integers are coprime if they share no non-trivial common factors. This is the same statement that $$\gcd(a,n)=1$$.
+{% endhint %}
+
+From the defintion of the protocol, we have that
+
+$$
+ed \equiv 1 \mod \phi(n), \;\; \Rightarrow \;\; ed = 1 + k\phi(n)
+$$
+
+for some $$k \in \mathbb{Z}$$. Combining this with Euler's theorem, we see that we recover $$m$$from the cipher text
 
 $$
 \begin{align}
-    m &\equiv c^d &&\mod n \\
-    m &\equiv (m^e)^d &&\mod n \\
+    c^d  &\equiv (m^e)^d &&\mod n \\
     m &\equiv m^{ed} &&\mod n \\
     m &\equiv m^{k\phi + 1} &&\mod n \\
     m &\equiv m^{k\phi} m &&\mod n \\
