@@ -42,7 +42,7 @@ assert plaintext == message
 To summarize:
 
 * We pick two primes $$p$$ and $$q$$
-* Using $$p$$and $$q$$, we calculate Euler's totient $$\phi$$
+* Using $$p$$ and $$q$$, we calculate Euler's totient $$\phi$$
 * We compute the private exponent $$d \equiv e^{-1} \mod \phi$$ and check that it exists
 * Public key: $$n, e$$
 * Private key: $$n, e, d$$
