@@ -23,6 +23,20 @@ $$
 
 * $$\mathbb{N}$$: denotes the set of natural numbers \(non-negative integers\)
 
+```python
+# We can call each of these sets with Sage using the following:
+sage: CC
+Complex Field with 53 bits of precision
+sage: RR
+Real Field with 53 bits of precision
+sage: ZZ
+Integer Ring
+sage: QQ
+Rational Field
+sage: NN
+Non negative integer semiring
+```
+
 ### Relation operators
 
 * $$\in$$means is an element of
