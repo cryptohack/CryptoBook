@@ -45,5 +45,5 @@ So anybody observing the messages sent between Alice and Bob would see $$p, g, g
 
 This is because given $$g$$ and $$g^a$$, it should be infeasible to calculate $$a$$. If this sounds familiar, that's because it's the [Discrete Log Problem](untitled.md).
 
-The original paper can be found [here](https://ee.stanford.edu/~hellman/publications/24.pdf). It uses the group of intergers modulo a prime to perform the key exchange. In practice however, any group with a hard discrete log problem can be used.
+The original paper can be found [here](https://ee.stanford.edu/~hellman/publications/24.pdf). It uses the group of integers modulo a prime to perform the key exchange. In practice however, any group with a hard discrete log problem can be used.
 
