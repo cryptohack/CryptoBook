@@ -16,10 +16,11 @@ When $$n$$ is composite and not a prime power, `discrete_log()` will be used, wh
 
 When $$n=p$$is a prime, Pari `znlog` will be used, which uses a linear sieve index calculus method, suitable for $$p < 10^{50} \sim 2 ^{166}$$.
 
-When $$n = p^k$$, SageMath will fall back on the generic implementation `discrete_log()`which can be slow. However, Pari `znlog` can handle this as well, again using the linear sieve index calculus method. To call this within SageMath we can use
+When $$n = p^k$$, SageMath will fall back on the generic implementation `discrete_log()`which can be slow. However, Pari `znlog` can handle this as well, again using the linear sieve index calculus method. To call this within SageMath we can use either of the following \(the first option being a tiny bit faster than the second\)
 
 ```python
-x = int(pari(f"znlog({int(b)},Mod({int(a)},{int(n)}))"))  
+x = int(pari(f"znlog({int(b)},Mod({int(a)},{int(n)}))"))
+x = gp.znlog(b, gp.Mod(a, n))
 ```
 
 #### Example
