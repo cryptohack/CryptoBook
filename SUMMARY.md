@@ -7,7 +7,7 @@
 
 ## Fundamentals
 
-* [Untitled](fundamentals/untitled.md)
+* [Mathematical Notation](fundamentals/untitled.md)
 
 ## Number Theory
 
