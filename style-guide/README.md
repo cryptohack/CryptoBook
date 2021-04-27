@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Work in progress
 ---
 
 # Style Guide
