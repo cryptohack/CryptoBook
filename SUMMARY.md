@@ -36,7 +36,7 @@
 * [Introduction](lattices/definitions.md)
 * [LLL reduction](lattices/lll-reduction/README.md)
   * [Gram-Schmidt Orthogonalization](lattices/lll-reduction/gram-schmidt-orthogonalization.md)
-  * [Gaussian Reduction](lattices/lll-reduction/gaussian-reduction.md)
+  * [Lagrange's algorithm](lattices/lll-reduction/gaussian-reduction.md)
   * [LLL reduction](lattices/lll-reduction/lll-reduced-basis.md)
 * [Reduced Basis](lattices/shortest-vector-problem.md)
 
