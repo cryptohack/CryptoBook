@@ -53,5 +53,9 @@ Algebraic closure of Finite Field of size 3
 * $$\forall$$means for all
 * $$\exists$$means there exists
 
+### Operators
+
+* $$Pr(A)$$ means the probability of an event $$A$$to happen. Sometimes denoted as $$P(A)$$
+
 
 

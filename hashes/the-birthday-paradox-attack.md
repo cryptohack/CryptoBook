@@ -118,6 +118,10 @@ print(approx_same_birthday(100, 365))
 Consider the following hash function: 
 
 ```python
+import hashlib
+import random
+from Crypto.Util.number import long_to_bytes, bytes_to_long
+
 def small_hash(m, hash_bits):
     '''
     Arguments
@@ -197,4 +201,9 @@ print(small_hash(m1, bit_range) == small_hash(m2, bit_range))
 # True
 
 ```
+
+## Resources
+
+* [https://en.wikipedia.org/wiki/Birthday\_problem](https://en.wikipedia.org/wiki/Birthday_problem)
+* [https://en.wikipedia.org/wiki/Birthday\_attack](https://en.wikipedia.org/wiki/Birthday_attack)
 

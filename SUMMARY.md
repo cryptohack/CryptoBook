@@ -51,8 +51,8 @@
 
 ## Hashes
 
-* [The Birthday paradox / attack](hashes/the-birthday-paradox-attack.md)
 * [Introduction / overview](hashes/introduction-overview.md)
+* [The Birthday paradox / attack](hashes/the-birthday-paradox-attack.md)
 
 ## Symmetric Cryptography
 
