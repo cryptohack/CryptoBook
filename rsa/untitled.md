@@ -25,7 +25,7 @@ Before starting to introducing you RSA, a few arithmetic notions need to be intr
 * We pick two primes $$p$$ and $$q$$
 * Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and it's **Euler's totient** $$\phi(n) = (p-1)*(q-1)$$
 * Now, chose the **public exponent** $$\mathbb{e}$$such as $$\mathbb{gcd(e, \phi(n)) = 1}$$
-* By using the **Euclid extend algorithm**, we compute the invert $$\mathbb{d}$$ of $$\mathbb{e \mod n}$$ :$$d \equiv e^{-1} \mod \phi(n)$$. Which is our **privet exponent**.
+* By using the **Euclid extend algorithm**, we compute the invert $$\mathbb{d}$$ of $$\mathbb{e \mod n}$$ :$$d \equiv e^{-1} \mod \phi(n)$$. Which is our **private exponent**.
 * **Public key**: $$n, e$$
 * **Private key**: $$n, d$$
 * Now, chose a **message** $$\mathbb{m}$$that you convert into integers
