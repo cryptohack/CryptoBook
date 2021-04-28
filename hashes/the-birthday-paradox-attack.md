@@ -85,9 +85,9 @@ print(same_birthday(23, 365), same_birthday(32, 365), same_birthday(100, 365))
 
 ####  An useful approximation
 
-From the taylor approximation we know $$e^x = 1 + x + \dfrac {x^2} {2!} + \dots => e_x\approx 1 + x$$ for $$x \ll 1$$
+From the Taylor approximation we know $$e^x = 1 + x + \dfrac {x^2} {2!} + \dots => e_x\approx 1 + x$$ for $$x \ll 1$$
 
-Apply for each event  $$\Rightarrow x = -a/d => e^{\frac {-a} d} \approx 1- \dfrac a d => Pr(A) = 1 - \prod_{i=1}^{n-1}e^{-i/d} = 1-e^{-\frac {n(n-1)} {2d}} \approx 1-\boxed{e^{-\frac {n^2} {2d}}}$$
+Apply for each event  $$\Rightarrow x = -\dfrac a d => e^{\frac {-a} d} \approx 1- \dfrac a d => Pr(A) = 1 - \prod_{i=1}^{n-1}e^{-i/d} = 1-e^{-\frac {n(n-1)} {2d}} \approx 1-\boxed{e^{-\frac {n^2} {2d}}}$$
 
 If we want to solve for $$n$$ knowing $$Pr(A)$$ we take the $$\ln$$ =&gt; $$\boxed{n \approx \sqrt{2d \ln \left(\dfrac 1 {1-Pr(A)}\right)}}$$
 
