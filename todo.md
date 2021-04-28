@@ -129,6 +129,7 @@ Mainly thinking things like:
 
 * XOR and its properties
 * XOR as One Time Pad
+* Generalized One Time Pad 
 
 **Block Ciphers**
 
