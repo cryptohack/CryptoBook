@@ -14,6 +14,10 @@ Reviewed by:
 
 ## The birthday paradox
 
+{% hint style="warning" %}
+\*insert story / introduction about why it's called a paradox\*
+{% endhint %}
+
 ### Birthday version
 
 * [https://www.youtube.com/watch?v=ofTb57aZHZs](https://www.youtube.com/watch?v=ofTb57aZHZs)
