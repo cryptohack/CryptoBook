@@ -15,12 +15,7 @@ If you're reading a page and something is new to you, come here and add the symb
 * $$\mathbb{C}$$: denotes the set of complex numbers
 * $$\mathbb{R}$$: denotes the set of real numbers
 * $$\mathbb{Z}$$: denotes the set of integers
-* $$\mathbb{Q}$$: denotes the set of rational numbers and can be thought of as constructed by
-
-$$
-\mathbb{Q} = \left\{ \frac{a}{b} \text{ for } a, b \in \mathbb{Z} \right\}
-$$
-
+* $$\mathbb{Q}$$: denotes the set of rational numbers
 * $$\mathbb{N}$$: denotes the set of natural numbers \(non-negative integers\)
 
 ```python
@@ -35,6 +30,18 @@ sage: QQ
 Rational Field
 sage: NN
 Non negative integer semiring
+```
+
+* We refer to a general field by $$k$$
+* We refer to the algebraic closure of this field by $$\bar{k}$$
+
+```python
+# Example of defining a field and then its 
+# algebraic closure
+sage: k = GF(3); k
+Finite Field of size 3
+sage: k_bar = k.algebraic_closure(); k_bar
+Algebraic closure of Finite Field of size 3
 ```
 
 ### Relation operators

@@ -46,6 +46,7 @@
 ## Isogeny Based Cryptography
 
 * [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
+* [Isogenies](isogeny-based-cryptography/untitled.md)
 
 ## Hashes
 
@@ -54,5 +55,8 @@
 ## Symmetric Cryptography
 
 * [The One Time Pad](symmetric-cryptography/the-one-time-pad.md)
-* [Untitled](symmetric-cryptography/untitled.md)
+
+---
+
+* [Untitled](untitled.md)
 
