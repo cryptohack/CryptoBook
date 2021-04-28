@@ -58,7 +58,24 @@ There's no "right or wrong" but it's good to be consistent, I think?
 ### Code Blocks
 
 * Make sure all code blocks have the right language selected for syntax highlighting
-* Preference is to SageMath, then to Python, then others. 
+* Preference is to SageMath, then to Python, then others.
+* Code should be cope-pastable. So if you include print statement, include the result of the output as a comment
+
+```python
+# Example
+a = 3
+b = 6
+print(a+b)
+# 9
+```
+
+### Algorithms
+
+* Algorithms should be presented as??
+
+```text
+// todo
+```
 
 
 

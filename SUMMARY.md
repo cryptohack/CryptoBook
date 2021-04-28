@@ -4,6 +4,7 @@
 * [Book Plan](todo.md)
 * [Style Guide](style-guide/README.md)
   * [Sample Page](style-guide/sample-page.md)
+* [Contributors](contributors.md)
 
 ## Fundamentals
 
