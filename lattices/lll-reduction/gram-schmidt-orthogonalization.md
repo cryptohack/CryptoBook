@@ -47,3 +47,13 @@ This outputs two matrices, $$\mathcal B^*$$and $$\mu$$:
 
 One can quickly verify that $$\mathcal B=\mu\mathcal B^*$$ and that the rows of $$\mathcal B^*$$are orthogonal to each other.
 
+A useful result is that
+
+
+
+$$
+\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i||b_i^*||
+$$
+
+Intuitively, this tells us that the more orthogonal a set of basis for a lattice is, the shorter it is as the volume must be constant.
+

@@ -39,6 +39,7 @@
   * [Lagrange's algorithm](lattices/lll-reduction/gaussian-reduction.md)
   * [LLL reduction](lattices/lll-reduction/lll-reduced-basis.md)
 * [Reduced Basis](lattices/shortest-vector-problem.md)
+* [Resources and notations](lattices/resources-and-notations.md)
 
 ## Block Ciphers
 

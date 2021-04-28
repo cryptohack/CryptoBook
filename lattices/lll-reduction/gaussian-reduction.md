@@ -25,7 +25,7 @@ def lagrange(b1,b2):
     return b1, b2
 ```
 
-Here $$\mu$$is actually the Gram-Schmidt coefficient $$\mu_{1,2}$$and it turns out that this algorithm will always find the shortest possible basis! Using the basis
+Here $$\mu$$is actually the Gram-Schmidt coefficient $$\mu_{2,1}$$and it turns out that this algorithm will always find the shortest possible basis! Using the basis
 
 $$
 \begin{matrix}
@@ -36,11 +36,11 @@ $$
 
 the Lagrange reduction looks like
 
-![](../../.gitbook/assets/lagrange1.svg)
+![](../../.gitbook/assets/lagrange1%20%281%29.svg)
 
-![](../../.gitbook/assets/lagrange2%20%281%29.svg)
+![](../../.gitbook/assets/lagrange2.svg)
 
-![](../../.gitbook/assets/lagrange3%20%281%29.svg)
+![](../../.gitbook/assets/lagrange3.svg)
 
 and here we see it clearly gives the shortest vectors.
 
