@@ -15,12 +15,10 @@ Reviewed by:
 ## The birthday paradox
 
 {% hint style="warning" %}
-\*insert story / introduction about why it's called a paradox\*
+\*insert story / introduction about why it's called a paradox + use\*
 {% endhint %}
 
 ### Birthday version
-
-* [https://www.youtube.com/watch?v=ofTb57aZHZs](https://www.youtube.com/watch?v=ofTb57aZHZs)
 
 **Question 1**
 
@@ -208,6 +206,7 @@ print(small_hash(m1, bit_range) == small_hash(m2, bit_range))
 
 ## Resources
 
-* [https://en.wikipedia.org/wiki/Birthday\_problem](https://en.wikipedia.org/wiki/Birthday_problem)
-* [https://en.wikipedia.org/wiki/Birthday\_attack](https://en.wikipedia.org/wiki/Birthday_attack)
+* [https://en.wikipedia.org/wiki/Birthday\_problem](https://en.wikipedia.org/wiki/Birthday_problem) - wiki entry
+* [https://en.wikipedia.org/wiki/Birthday\_attack](https://en.wikipedia.org/wiki/Birthday_attack) - wiki entry
+* [https://www.youtube.com/watch?v=ofTb57aZHZs](https://www.youtube.com/watch?v=ofTb57aZHZs) - vsauce2 video
 

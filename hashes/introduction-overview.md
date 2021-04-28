@@ -38,10 +38,13 @@ sha256(m1).digest() == sha256(m2).digest() # -> True
 
 > The hash function must be a one way function. Given $$t \in \mathcal{T}$$ find $$m \in \mathcal{M}$$ s.t $$H(m) = t$$
 
-_Intuition_
+{% hint style="info" %}
+_Intuition_ 
 
-* It should be unfeasible to reverse a hash function \($$\mathcal{O}(2^l)$$ time where $$l$$ is the number of output bits\)
-* This propriety prevents an attacker to find the original message from a hash
+It should be unfeasible to reverse a hash function \($$\mathcal{O}(2^l)$$ time where $$l$$ is the number of output bits\)
+
+This propriety prevents an attacker to find the original message from a hash
+{% endhint %}
 
 ### 2. Second Preimage Resistance
 
@@ -62,9 +65,11 @@ _Intuition_
 
 ### 3. Hash Collisions
 
+{% hint style="info" %}
 _Intuition_
 
-> A hash collision happens when we have two different messages that have the same hash
+A hash collision happens when we have two different messages that have the same hash
+{% endhint %}
 
 **Why do we care about hash collisions?**
 
@@ -90,10 +95,15 @@ _Intuition_
 
 > A hash function $$H$$ is collision resistant if for all efficient and **explicit** adversaries the advantage is negligible
 
-_Intuition_
+{% hint style="info" %}
+Intuition
 
-* We know hash collisions exist \(therefore an efficient adversary must exist\) and that is easy to prove therefore we request an **explicit** algorithm that finds these collisions
-* This propriety makes it difficult for an attacker to find 2 input values with the same hash 
+We know hash collisions exist \(therefore an efficient adversary must exist\) and that is easy to prove therefore we request an **explicit** algorithm that finds these collisions
+{% endhint %}
+
+{% hint style="info" %}
+This propriety makes it difficult for an attacker to find 2 input values with the same hash 
+{% endhint %}
 
 #### Difference from 2nd preimage
 

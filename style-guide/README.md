@@ -6,9 +6,9 @@ description: Work in progress
 
 ## Working together
 
-* If something doesnt make sense, make a comment using GitBook, or ask in the Discord.
+* If something doesn't make sense, make a comment using GitBook, or ask in the Discord.
 * If you are confident that something is wrong, just fix it. There's no need to ask. 
-* If you think something doesnt have enough detail, expand on it, or leave a comment suggesting that.
+* If you think something doesn't have enough detail, expand on it, or leave a comment suggesting that.
 * If a page is getting too long, break it down into new pages. If you're unsure, then leave a comment or talk in the discord
 * If you want to write about something new and learn as you type, this is fine! But **please** leave a warning at the top that this is new to you and needs another pair of eyes.
 * If there's big subject you're working on, claim the page and save it, show us that that's what you're doing so we don't overlap too much
@@ -35,7 +35,7 @@ To use $$\LaTeX$$, you can wrap your text in `$$maths here$$.` If this is at the
 
 ## Page Structure
 
-* A page should have a clear educational goal: this should be explained in the introduction. References to prerequesites should be kept within the book and if the book doesnt have this yet, it should be placed into [Book Plan](../todo.md).
+* A page should have a clear educational goal: this should be explained in the introduction. References to prerequisites should be kept within the book and if the book doesnt have this yet, it should be placed into [Book Plan](../todo.md).
 * The topic should be presented initially with theory, showing the mathematics and structures we will need. A discussion should be pointed towards how this appears within Cryptography
 
 {% hint style="success" %}
