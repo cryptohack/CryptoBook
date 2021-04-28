@@ -49,7 +49,7 @@ _Solution_
 
 * Event n = Person n is born on a different day than Person   $$1,...,n-1 \Rightarrow$$ $$\Rightarrow Pr(E_n) = \dfrac {365-(n-1)} {365}$$
 
-$$Pr(\bar{A}) = Pr(E1) \cdot Pr(E_2) \cdot \dots \cdot Pr(E_n) = \dfrac {365} {365} \cdot \dfrac {364} {365} \cdot \dots \cdot \dfrac {365-(n-1)} {365} = \left( \dfrac {1} {365} \right) ^{n} \cdot \dfrac {365!} {(365-n)!} = \prod{i=1}^{n-1} \left(1 - \dfrac i {365}\right)$$
+$$Pr(\bar{A}) = Pr(E1) \cdot Pr(E_2) \cdot \dots \cdot Pr(E_n) = \dfrac {365} {365} \cdot \dfrac {364} {365} \cdot \dots \cdot \dfrac {365-(n-1)} {365} = \left( \dfrac {1} {365} \right) ^{n} \cdot \dfrac {365!} {(365-n)!} = \prod_{i=1}^{n-1} \left(1 - \dfrac i {365}\right)$$
 
 
 
