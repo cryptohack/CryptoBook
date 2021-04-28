@@ -8,6 +8,7 @@
 ## Fundamentals
 
 * [Mathematical Notation](fundamentals/notation.md)
+* [Continued Fractions](fundamentals/continued-fractions.md)
 * [Division and Greatest common divisor](fundamentals/untitled-1/README.md)
   * [Euclidean Algorithm](fundamentals/untitled-1/euclidean-algorithm.md)
 
