@@ -4,32 +4,23 @@ description: 'Author: chuck_bartowski'
 
 # The One Time Pad
 
-{% hint style="warning" %}
-Note and question: Ideally we should have a separate section on encryption schemes and their formalism\(Kgen, Enc, Dec...\) then we can refactor out this text from here. 
-{% endhint %}
-
 ### Introduction
 
-A typical application of cryptography is secure communication. Informally a secure communication channel is one that provides both **confidentiality** and **Integrity** of the messages. In this section we investigate confidentiality, therefore we may assume that integrity is already guaranteed by some other means. \(see section on integrity...\#TODO\)
-
-### Encryption
-
-A sender typically "encrypts" a message, this produces a ciphertext that is then sent. A secure encryption scheme will prevent an eavesdropper to learn the content of the message since the ciphertext is unintelligible. 
-
-### The One-Time Pad
-
-The One Time Pad \(OTP\) is a well example of encryption schemes that provide "perfect secrecy". Informally, this means that observing a ciphertext does no give any information to the eavesdropper. A proof of this fact will be provided later. **Crucially we will assume that the sender and the receiver have both access to a common source of random bits.** 
+The One Time Pad \(OTP\) is a well known example of encryption schemes that provide "perfect secrecy". Informally, this means that observing a ciphertext does no give any information to the eavesdropper. A proof of this fact will be provided later. **Crucially we will assume that the sender and the receiver have both access to a common source of random bits.** 
 
 ### XOR as a One-Time Pad
 
-XOR\(addition modulo 2\) can be used as an encryption scheme as follows: 
+XOR\(addition modulo 2\) can be used as an encryption scheme as follows: The message space is $$\mathcal M \subseteq \{0, 1\}^n$$\(i.e.: length n bit strings\), the key space is $$\mathcal K = \{0, 1\}$$ and the ciphertext space is also $$\{0,1\}$$
 
-* The message to be sent $m$ is represented as a bitstring
-* The sender generates a random key $k$ that is a bitstring of the same length as $m$
-* The ciphertext is $c = m \oplus k$  
+* Encryption: $$\text{Enc}(m,k) = m \oplus k$$
+* Decryption:$$\text{Dec}(c,k) = c \oplus k$$
+
+{% hint style="success" %}
+The correctness of the schemes is easily verifiable. If the encryption produces $$c = m \oplus k$$, then the decryption produces $$m' = c \oplus k = m \oplus k \oplus k = m$$.
+{% endhint %}
 
 {% hint style="info" %}
-In Python snippet with use to `os` module to generate random bits. Although messages, keys and ciphertext are byte arrays; they are still bit strings
+In the Python snippet below with use to `os` module to generate random bits. 
 {% endhint %}
 
 ```python

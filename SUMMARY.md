@@ -58,6 +58,7 @@
 
 ## Symmetric Cryptography
 
+* [Encryption](symmetric-cryptography/encryption.md)
 * [The One Time Pad](symmetric-cryptography/the-one-time-pad.md)
 
 ---
