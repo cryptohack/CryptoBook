@@ -33,7 +33,10 @@ _Solution_
 Then
 
 * $$Pr(A) = 1 - Pr(\bar{A}) = 1 - \prod_{i=1}^n Pr(E_i) = 1 - \left( \dfrac {364} {365}\right)^n$$
-* Reminder $$Pr(A, B) = Pr(A) \cdot Pr(B)$$if $$A, B$$are independent events
+
+{% hint style="success" %}
+Reminder: $$Pr(A, B) = Pr(A) \cdot Pr(B)$$if $$A, B$$are independent events
+{% endhint %}
 
 **Question 2**
 
@@ -85,7 +88,7 @@ print(same_birthday(23, 365), same_birthday(32, 365), same_birthday(100, 365))
 
 From the Taylor approximation we know $$e^x = 1 + x + \dfrac {x^2} {2!} + \dots => e_x\approx 1 + x$$ for $$x \ll 1$$
 
-Apply for each event  $$\Rightarrow x = -\dfrac a d => e^{\frac {-a} d} \approx 1- \dfrac a d => Pr(A) = 1 - \prod_{i=1}^{n-1}e^{-i/d} = 1-e^{-\frac {n(n-1)} {2d}} \approx 1-\boxed{e^{-\frac {n^2} {2d}}}$$
+Apply for each event  $$\Rightarrow x = -\dfrac a d \Rightarrow  e^{ -a /d} \approx 1- \dfrac a d \Rightarrow  Pr(A) = 1 - \prod_{i=1}^{n-1}e^{-i/d} = 1-e^{-n(n-1) /{2d}} \approx 1-\boxed{e^{-{n^2} / {2d}}}$$
 
 If we want to solve for $$n$$ knowing $$Pr(A)$$ we take the $$\ln$$ =&gt; $$\boxed{n \approx \sqrt{2d \ln \left(\dfrac 1 {1-Pr(A)}\right)}}$$
 
