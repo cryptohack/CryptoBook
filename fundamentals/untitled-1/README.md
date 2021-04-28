@@ -39,9 +39,11 @@ Let $$\mathbb{Z} = \{\dots , -1, 0, 1, 2, 3 \dots \}$$be the set denoting the in
 **Examples:**
 
 ```python
-from Crypto.Util.number import GCD
-print(GCD(18, 12)) # -> 6
-print(gcd(18, 12)) # -> 6 - SageMath has gcd
+# In python we can import math to get the GCD algo
+import math
+print(math.gcd(18, 12)) # -> 6
+# Sage has it already!
+print(gcd(18, 12)) # -> 6
 ```
 
 
