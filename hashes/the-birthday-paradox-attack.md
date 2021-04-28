@@ -135,7 +135,7 @@ def small_hash(m, hash_bits):
         {bytes} - hash of the message of dimension `hash_bits`
         '''
     t = hashlib.sha256(m).hexdigest() # the hash in bytes
-    t = bin(int(t,16))[2:2+hash_bits] # get the first `hash_bits` bits
+    t = bin(int(t, 16))[2:2+hash_bits] # get the first `hash_bits` bits
     t = int(t, 2) # transform it back to int
     return long_to_bytes(t) # return hash digest
 ```
