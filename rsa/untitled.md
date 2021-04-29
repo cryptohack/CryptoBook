@@ -12,6 +12,8 @@ RSA is a [public-key cryptosystem](https://en.wikipedia.org/wiki/Public-key_cryp
 
 All public-key systems are based on the concept of [_trapdoor functions_](https://en.wikipedia.org/wiki/Trapdoor_function#:~:text=A%20trapdoor%20function%20is%20a,are%20widely%20used%20in%20cryptography.), functions that are simple to compute in one direction but computationally hard to reverse without knowledge of some special information called the _trapdoor_. In RSA, the trapdoor function is based on the [hardness of factoring integers](https://en.wikipedia.org/wiki/Integer_factorization). The function involves the use of a public key$$N $$to encrypt data, which is \(supposed to be\) encrypted in such a way that the function cannot be reversed without knowledge of the prime factorisation of$$N $$, something that should be kept private. Except in certain cases, there exists no efficient algorithm for factoring huge integers.
 
+Further reading: [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) 
+
 {% hint style="danger" %}
 Formalize the introduction and include a discussion of the security based on the hardness of factoring integers.
 {% endhint %}
