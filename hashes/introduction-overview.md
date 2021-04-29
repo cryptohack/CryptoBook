@@ -4,9 +4,21 @@ Author: Zademn
 
 Reviewed by: 
 
-## Hashes
+## Introduction
 
-**Definition**
+Alongside **confidentiality**, another desired propriety of our cryptographic protocols is data / message **integrity**. This propriety assures that during a data transfer the data has not been modified.
+
+Suppose Alice has a new favourite game and wants to send it to Bob. How can Bob be sure that the file he receives is the same as the one Alice intended to send? One would say to run the game and see. But what if the game is a malware? What if there are changes that are undetectable to the human eye?
+
+ **Hashes** are efficient algorithms to check if two files are the same based on the data they contain. The slightest change \(a single bit\) would change the hash completely.
+
+{% hint style="success" %}
+On the internet, when you download, files you often see a number near the download button called the **hash** of that file. If you download that file, recalculate the hash locally and obtain the same hash you can be sure that the data you downloaded is the intended one.
+{% endhint %}
+
+## Definitions and Formalisms 
+
+**Definition - Hash**
 
 > A hash is an efficient deterministic function that takes an arbitrary length input and produces a fixed length output \(digest, hash\). Let $$H:\mathcal{M} \longrightarrow \mathcal{T}$$ be a function where
 >
