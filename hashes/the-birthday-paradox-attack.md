@@ -1,6 +1,6 @@
 # The Birthday paradox / attack
 
-Author: Zademn  
+Author: Zademn, ireland  
 Reviewed by: 
 
 **Prerequisites**
@@ -273,7 +273,7 @@ This is implemented in the following code snippet.
 """
 initialization
 
-This routine will find a hash collision with in sqrt time with constant space.
+This routine will find a hash collision in sqrt time with constant space.
 """
 
 seed = 0
