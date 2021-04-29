@@ -51,6 +51,7 @@
 
 * [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
 * [Isogenies](isogeny-based-cryptography/untitled.md)
+* [Isogeny and Ramanujan Graphs](isogeny-based-cryptography/isogeny-and-ramanujan-graphs.md)
 
 ## Hashes
 
