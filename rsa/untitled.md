@@ -18,6 +18,8 @@ Further reading: [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algor
 Formalize the introduction and include a discussion of the security based on the hardness of factoring integers.
 {% endhint %}
 
+As far as the strength of RSA is concerned, its measured in key-size or, the modulus size. RSA is no longer considered secure, with the prime reason being that it is susceptible to brute-force attacks which are capable of extracting the private keys within a very short time interval.
+
 ### II- Arithmetic for RSA
 
 Before starting to introducing you RSA, a few arithmetic notions need to be introduce to understand perfectly other steps.
