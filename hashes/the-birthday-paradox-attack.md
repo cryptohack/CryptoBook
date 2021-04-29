@@ -211,7 +211,7 @@ print(small_hash(m1, bit_range) == small_hash(m2, bit_range))
 
 While the above algorithm works to find a hash collision in time $$O(\sqrt N )$$, it also requires storing $$O(\sqrt N )$$hash values. As such, it represents a classic time-space tradeoff over the naive approach, which involves randomly selecting pairs of inputs until they hash to the same value. While the naive approach does not require any additional storage, it does have runtime $$O(N )$$.
 
-However, there is a better approach combining the best of both worlds: constant storage requirements and $$O(\sqrt N)$$runtime. This approach is based on Pollard's Rho algorithm, which is better-known for its application to solving discrete logarithms. The core insight behind the algorithm is that by the Birthday Paradox, we expect to encounter a hash collision after trying $$O(\sqrt N)$$random inputs. However, it is possible to detect whether a collision has occured without needing to store all of the inputs and hashes if the inputs are chosen in a clever way.
+However, there is a better approach combining the best of both worlds: constant storage requirements and $$O(\sqrt N)$$runtime. This approach is based on Pollard's Rho algorithm, which is better-known for its application to solving discrete logarithms. The core insight behind the algorithm is that by the Birthday Paradox, we expect to encounter a hash collision after trying $$O(\sqrt N)$$random inputs. However, it is possible to detect whether a collision has occurred without needing to store all of the inputs and hashes if the inputs are chosen in a clever way.
 
 This is done by choosing the next input based on the hash of the previous input, according to the following sequence:
 
