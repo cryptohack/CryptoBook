@@ -25,6 +25,13 @@ On the internet, when you download, files you often see a number near the downlo
 > * $$\mathcal{M}$$ = message space
 > * $$\mathcal{T}$$ = digest space
 
+**Desired proprieties**
+
+* Deterministic
+* Fast to compute
+* Small changes change the hash completely
+* Preimage, second preimage, collision resistance \(Explained below\)
+
 _Uses_
 
 * Suppose you want to check if Alice and Bob have the same version of some file \(**File integrity**\)
