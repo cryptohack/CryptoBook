@@ -1,5 +1,7 @@
 # Gram-Schmidt Orthogonalization
 
+## Overview
+
 Gram-Schmidt orthogonalization is an algorithm that takes in a basis $$\left\{b_i\right\}_{i=1}^n$$ as an input and returns a basis $$\left\{b_i^*\right\}_{i=1}^n$$where all vectors are orthogonal, i.e. at right angles. This new basis is defined as 
 
 $$
@@ -49,11 +51,19 @@ One can quickly verify that $$\mathcal B=\mu\mathcal B^*$$ and that the rows of 
 
 A useful result is that
 
-
-
 $$
 \det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i||b_i^*||
 $$
 
 Intuitively, this tells us that the more orthogonal a set of basis for a lattice is, the shorter it is as the volume must be constant.
+
+## Exercises
+
+1\) Verify that the example is indeed correct.
+
+2\) Show that $$\langle b_i^*,b_j^*\rangle=\delta_{i,j}$$.
+
+3\) Show that $$\mu\mu^T=1$$and $$\mathcal B^*\mathcal B^{*T}$$ is a diagonal matrix whose entries are $$||b_i^*||$$. Conclude that $$\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i||b_i^*||$$.  
+
+4\*\) Given the Iwasawa decomposition $$\mathcal B=LDO$$where $$L$$is a lower diagonal matrix with $$1$$on its diagonal, $$D$$is a diagonal matrix and $$O$$an orthogonal matrix, meaning $$OO^T=1$$, show that $$\mathcal B^*=DO$$and $$\mu=L$$. Furthermore, prove that such a decomposition is unique.
 

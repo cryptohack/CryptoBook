@@ -1,5 +1,7 @@
 # LLL reduction
 
+## Overview
+
 There are a few issues that one may encounter when attempting to generalize Lagrange's algorithm to higher dimensions. Most importantly, one needs to figure what is the proper way to swap the vectors around and when to terminate, ideally in in polynomial time. A rough sketch of how the algorithm should look like is
 
 ```text
@@ -49,8 +51,10 @@ $$
 However, since $$\mu_{i,j}=\frac{\langle b_i,b_j^*\rangle}{\langle b_j^*,b_j^*\rangle}$$, this condition is easily satisfied for a sufficiently long $$b_j^*$$, which is not what we want. The key idea is to merge these two in some way and was first noticed by Lovász - named the **Lovász condition**:
 
 $$
-\delta||b_i^*||^2\leq||b_{i+1}^*+\mu_{i+1,i}b_i^*||^2\quad\delta\in(0.25,1)
+\delta||b_i^*||^2\leq||b_{i+1}^*+\mu_{i+1,i}b_i^*||^2\quad\delta\in\left(\frac14,1\right)
 $$
 
-It turns out that using this condition, the algorithm above terminates in polynomial time! More specifically, it has a time complexity of $$O\left(m^5n\log^3B\right)$$where we have $$m$$basis vectors as a subset of $$\mathbb R^n$$and $$B$$is a bound for the largest norm of $$b_i$$.
+It turns out that using this condition, the algorithm above terminates in polynomial time! More specifically, it has a time complexity of $$O\left(m^5n\log^3B\right)$$where we have $$m$$basis vectors as a subset of $$\mathbb R^n$$and $$B$$is a bound for the largest norm of $$b_i$$. $$\frac14<\delta$$ ensures that the lattice vectors are ordered roughly by size and $$\delta<1$$ensures the algorithm terminates.
+
+
 
