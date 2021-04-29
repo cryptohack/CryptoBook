@@ -46,9 +46,9 @@ the Lagrange reduction looks like
 
 and here we see it clearly gives the shortest vectors.
 
-## Proof of optimality
+## Optimality proof
 
-Let $$L$$be a lattice. The basis $$b_1,b_2$$is defined to be the shortest for any other basis $$b_1',b_2',\left\lVert b_1'\right\rVert\leq\left\lVert b_2'\right\rVert$$, we have $$\left\lVert b_1\right\rVert\leq\left\lVert b_1'\right\rVert$$and $$\left\lVert b_2\right\rVert\leq\left\lVert b_2'\right\rVert$$. Note that this generally cannot be generalized to other dimensions, however in dimension 2, this is possible and is given by Lagrange's algorithm. The proof is a somewhat messy sequence of ineqalities that eventually lead to the conclusion we want.
+Let $$L$$be a lattice. The basis $$b_1,b_2$$is defined to be the shortest for any other basis $$b_1',b_2',\left\lVert b_1'\right\rVert\leq\left\lVert b_2'\right\rVert$$, we have $$\left\lVert b_1\right\rVert\leq\left\lVert b_1'\right\rVert$$and $$\left\lVert b_2\right\rVert\leq\left\lVert b_2'\right\rVert$$. Note that this generally cannot be generalized to other dimensions, however in dimension 2, this is possible and is given by Lagrange's algorithm. The proof is a somewhat messy sequence of inequalities that eventually lead to the conclusion we want.
 
 Let $$b_1,b_2$$be the output of the Lagrange reduction for some lattice $$L$$. To prove that Lagrange reduction gives the shortest basis, we first show that $$\left\lVert b_1\right\rVert$$is the shortest vector in $$L$$.
 

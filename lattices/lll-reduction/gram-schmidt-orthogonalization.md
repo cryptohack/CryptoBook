@@ -52,7 +52,7 @@ One can quickly verify that $$\mathcal B=\mu\mathcal B^*$$ and that the rows of 
 A useful result is that
 
 $$
-\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i||b_i^*||
+\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i\left\lVert b_i^*\right\rVert
 $$
 
 Intuitively, this tells us that the more orthogonal a set of basis for a lattice is, the shorter it is as the volume must be constant.
@@ -63,7 +63,7 @@ Intuitively, this tells us that the more orthogonal a set of basis for a lattice
 
 2\) Show that $$\langle b_i^*,b_j^*\rangle=\delta_{i,j}$$.
 
-3\) Show that $$\mu\mu^T=1$$and $$\mathcal B^*\mathcal B^{*T}$$ is a diagonal matrix whose entries are $$||b_i^*||$$. Conclude that $$\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i||b_i^*||$$.  
+3\) Show that $$\mu\mu^T=1$$and $$\mathcal B^*\mathcal B^{*T}$$ is a diagonal matrix whose entries are $$\left\lVert b_i^*\right\rVert$$. Conclude that $$\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i\left\lVert b_i^*\right\rVert$$.  
 
 4\*\) Given the Iwasawa decomposition $$\mathcal B=LDO$$where $$L$$is a lower diagonal matrix with $$1$$on its diagonal, $$D$$is a diagonal matrix and $$O$$an orthogonal matrix, meaning $$OO^T=1$$, show that $$\mathcal B^*=DO$$and $$\mu=L$$. Furthermore, prove that such a decomposition is unique.
 
