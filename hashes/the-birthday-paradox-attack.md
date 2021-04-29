@@ -135,10 +135,13 @@ def small_hash(m, hash_bits):
     Returns:
         {bytes} - hash of the message of dimension `hash_bits`
         '''
-    t = hashlib.sha256(m).hexdigest() # the hash in bytes
-    t = bin(int(t, 16))[2:2+hash_bits] # get the first `hash_bits` bits
-    t = int(t, 2) # transform it back to int
-    return long_to_bytes(t) # return hash digest
+    assert hash_bits > 0, "no negative number of bits"
+    
+    mask = (1 << hash_bits) - 1 # Mask of bits
+    t = hashlib.sha256(m).digest() # the hash in bytes
+    t = bytes_to_long(t)
+    t = t & mask # get the last 12 bits
+    return long_to_bytes(t)
 ```
 
 We make the following function to find the hashes:
@@ -196,13 +199,13 @@ T_bits = 20
 
 m1, m2, t = small_hash_colision(M_bits, T_bits)
 print(m1, m2, t)
-print(small_hash(m1, bit_range) == small_hash(m2, bit_range))
+print(small_hash(m1, T_bits) == small_hash(m2, T_bits))
 
 # Hash size:  1048576
 # Making a list of 1229 hashes
 # Probability of finding a collision is 0.513213460854798
 # Collision found!
-# b'\x12\xd2\xe9\x9d' b';c\x0f\x85' b'\x0b|\xce'
+# b'!\xafB\xc5' b'4F\xb6w' b'\x01y\xf7'
 # True
 
 ```
