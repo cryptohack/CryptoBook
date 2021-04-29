@@ -207,9 +207,142 @@ print(small_hash(m1, bit_range) == small_hash(m2, bit_range))
 
 ```
 
+## Eliminating Storage Requirements with Pollard's Rho
+
+While the above algorithm works to find a hash collision in time $$O(\sqrt N )$$, it also requires storing $$O(\sqrt N )$$hash values. As such, it represents a classic time-space tradeoff over the naive approach, which involves randomly selecting pairs of inputs until they hash to the same value. While the naive approach does not require any additional storage, it does have runtime $$O(N )$$.
+
+However, there is a better approach combining the best of both worlds: constant storage requirements and $$O(\sqrt N)$$runtime. This approach is based on Pollard's Rho algorithm, which is better-known for its application to solving discrete logarithms. The core insight behind the algorithm is that by the Birthday Paradox, we expect to encounter a hash collision after trying $$O(\sqrt N)$$random inputs. However, it is possible to detect whether a collision has occured without needing to store all of the inputs and hashes if the inputs are chosen in a clever way.
+
+This is done by choosing the next input based on the hash of the previous input, according to the following sequence:
+
+$$
+x_0 =  g(seed) \\
+x_1 = g(H(x_0)) \\
+x_2 = g(H(x_1)) \\
+\dots \\
+x_{n+1} = g(H(x_n)) \\
+$$
+
+Where $$H:\mathcal{M} \longrightarrow \mathcal{T}$$ is our hash function and $$g: \mathcal{T} \longrightarrow \mathcal{M} $$ is a "sufficiently random" function which takes a hash value and produces a new. We define the composition of the functions to be$$f = H \circ g : \mathcal{T} \longrightarrow \mathcal{T} $$. 
+
+```python
+# TODO:
+# have the two hash functions used in this chapter be the same
+
+from Crypto.Hash import SHA256
+from Crypto.Util.number import bytes_to_long, long_to_bytes
+
+from tqdm.autonotebook import tqdm
+
+# bits in hash output
+n = 30
+
+# H
+def my_hash(x):
+    x = bytes(x, 'ascii')
+    h = SHA256.new()
+    h.update(x)
+    y = h.digest()
+    y = bytes_to_long(y)
+    y = y % (1<<n)
+    y = int(y)
+    return y
+
+# g
+def get_message(r):
+    x = "Crypto{" + str(r) + "}"
+    return x
+
+# f
+def f(r):
+    return my_hash(get_message(r))
+
+```
+
+By the Birthday Paradox, we expect that the sequence will have a collision \(where $$x_i = x_j$$ for two distinct values $$i,j$$\) after $$O(\sqrt N)$$values. But once this occurs, then the sequence will begin to cycle, because $$x_{i+1} = g(H(x_i)) = g(H(x_j)) = x_{j+1}$$.
+
+Therefore, we can detect that a collision has occurred by using standard cycle-detection algorithms, such as [Floyd's tortoise and hare](https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_tortoise_and_hare)!
+
+And finally, we can locate the first place in the sequence where the collision occurred, which will let us determine what the colliding inputs to the hash function are. This is done by determining how many iterations apart the colliding inputs are, and then stepping together one iteration at a time until the collision occurs.
+
+For Floyd's tortoise and hare, this is done by noting that when we found our collision after $$n$$ iterations, we were comparing $$H(x_{n}) = H(x_{2 n})$$. And because the sequence is cyclic, if the first colliding input is $$x_i$$, then it collides with$$H(x_{i}) = H(x_{i+n})$$. So we define the new sequence $$y_i = x_{n+i}$$, and step through the $$x_i$$ and $$y_i$$ sequences together until we find our collision!
+
+This is implemented in the following code snippet.
+
+```python
+"""
+initialization
+
+This routine will find a hash collision with in sqrt time with constant space.
+"""
+
+seed = 0
+
+x0 = get_message(seed)
+x = x0
+y = f(x)
+
+"""
+detect collision
+using Floyd / tortoise and hare cycle finding algorithm
+
+expected number of iterations is ~ sqrt(pi/2) * 2^(n/2),
+we run for up to 4 * 2^(n/2) iterations
+"""
+for i in tqdm(range(4 << (n//2))):
+        
+    if f(x) == f(y):
+        break
+        
+    x = f(x)
+    
+    y = f(y)
+    y = f(y)
+    
+
+"""
+locate collision
+"""
+x = x0
+y = f(y)
+
+
+for j in tqdm(range(i)):
+    if f(x) == f(y):
+        break
+    
+    x = f(x)
+    
+    y = f(y)
+    
+
+m1 = get_message(x)
+m2 = get_message(y)
+
+assert my_hash(m1) == f(x)
+assert my_hash(m2) == f(y)
+
+print("[+] seeds for messages: {}, {}".format(x, y))
+print("[+] messages: {}, {}".format(m1, m2))
+print("[+] collided hashes of messages: {}, {}".format(my_hash(m1), my_hash(m2)))
+
+
+# 31%    40391/131072 [00:03<00:08, 10666.20it/s]
+# 30%    12032/40391 [00:00<00:02, 13112.15it/s]
+# 
+# [+] seeds for messages: 404842900, 254017312
+# [+] messages: Crypto{404842900}, Crypto{254017312}
+# [+] collided hashes of messages: 1022927209, 1022927209
+```
+
+Finally, there is a third algorithm for finding hash collisions in $$O(\sqrt N)$$time, namely the [van Oorschot-Wiener algorithm](https://people.scs.carleton.ca/~paulv/papers/JoC97.pdf) based on Distinguished Points. While it does have additional storage requirements over Pollard's Rho, the main advantage of this algorithm is that it parallelizes extremely well, achieving $$O(\frac{\sqrt N}{m})$$runtime when run on $$m$$ processors.
+
 ## Resources
 
 * [https://en.wikipedia.org/wiki/Birthday\_problem](https://en.wikipedia.org/wiki/Birthday_problem) - wiki entry
 * [https://en.wikipedia.org/wiki/Birthday\_attack](https://en.wikipedia.org/wiki/Birthday_attack) - wiki entry
 * [https://www.youtube.com/watch?v=ofTb57aZHZs](https://www.youtube.com/watch?v=ofTb57aZHZs) - vsauce2 video
+* [van Oorschot-Wiener Parallel Collision Search with Cryptanalytic Applications](https://people.scs.carleton.ca/~paulv/papers/JoC97.pdf)
+* [http://www.cs.umd.edu/~jkatz/imc/hash-erratum.pdf](http://www.cs.umd.edu/~jkatz/imc/hash-erratum.pdf)
+* [https://crypto.stackexchange.com/questions/3295/how-does-a-birthday-attack-on-a-hashing-algorithm-work?rq=1](https://crypto.stackexchange.com/questions/3295/how-does-a-birthday-attack-on-a-hashing-algorithm-work?rq=1)
 
