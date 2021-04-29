@@ -18,6 +18,7 @@
 ---
 
 * [Ideals](ideals.md)
+* [Polynomials With Shared Roots](polynomials-with-shared-roots.md)
 
 ## Group Theory
 
@@ -60,8 +61,4 @@
 
 * [Encryption](symmetric-cryptography/encryption.md)
 * [The One Time Pad](symmetric-cryptography/the-one-time-pad.md)
-
----
-
-* [Untitled](untitled.md)
 
