@@ -45,14 +45,14 @@ Example of defining a field and then its
 algebraic closure
 """
 GF(3)
-# Finite Field of size 3
+# Finite Field of size 3 , where GF stands for Galois Field 
 GF(3).algebraic_closure()
 # Algebraic closure of Finite Field of size 3
 ```
 
 ### Relation operators
 
-* $$\in$$means is an element of
+* $$\in$$means is an element of \(belongs to\)
 
 ### Logical Notation
 
