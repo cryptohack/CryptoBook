@@ -131,7 +131,7 @@ def small_hash(m, hash_bits):
     '''
     Arguments
         m: bytes -- input
-        hash_bits: int -- number of bits
+        hash_bits: int -- number of bits of the hash
     Returns:
         {bytes} - hash of the message of dimension `hash_bits`
         '''
