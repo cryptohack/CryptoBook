@@ -16,7 +16,7 @@ Suppose Alice has a new favourite game and wants to send it to Bob. How can Bob 
 On the internet, when you download, files you often see a number near the download button called the **hash** of that file. If you download that file, recalculate the hash locally and obtain the same hash you can be sure that the data you downloaded is the intended one.
 {% endhint %}
 
-## Definitions and Formalisms 
+## Definitions and Formalism 
 
 **Definition - Hash**
 
