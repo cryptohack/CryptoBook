@@ -7,7 +7,7 @@ description: Optional space to say that you've worked on the book
 ## Thank you!
 
 {% hint style="success" %}
-🥳  CryptoBook is the result of the hard work of the CryptoHack community. Thanks to all of our writers, whether it's been line edits of whole section creation. This only exists because of the generosity and passion of a group of cryptographers.
+🥳  CryptoBook is the result of the hard work of the CryptoHack community. Thanks to all of our writers, whether it's been line edits or whole section creation. This only exists because of the generosity and passion of a group of cryptographers.
 {% endhint %}
 
 ## Our Writers
