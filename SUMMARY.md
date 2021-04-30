@@ -45,7 +45,8 @@
 
 ## Block Ciphers
 
-* [AES](block-ciphers/aes.md)
+* [AES](block-ciphers/aes/README.md)
+  * [Rijndael Finite Field](block-ciphers/aes/rijndael-finite-field.md)
 
 ## Isogeny Based Cryptography
 
