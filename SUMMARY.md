@@ -47,6 +47,7 @@
 
 * [AES](block-ciphers/aes/README.md)
   * [Rijndael Finite Field](block-ciphers/aes/rijndael-finite-field.md)
+  * [Round Transformations](block-ciphers/aes/round-transformations.md)
 
 ## Isogeny Based Cryptography
 
