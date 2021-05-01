@@ -100,5 +100,7 @@ print(math.gcd(18, 12)) # -> 6
 print(gcd(18, 12)) # -> 6
 ```
 
+**Remark:**
 
+* for all other common divisors $$c$$ of $$a, b$$we have $$c | d$$
 
