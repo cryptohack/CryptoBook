@@ -56,7 +56,7 @@ print(my_gcd(24, 15))
 # 3
 ```
 
-**Exercices**:
+**Exercises**:
 
 1. Pick 2 numbers and calculate their $$\gcd$$by hand. 
 2. Implement the algorithm in Python / Sage and play with it. **Do not copy paste the code**
