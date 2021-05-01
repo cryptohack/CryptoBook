@@ -36,9 +36,13 @@ For $$a = 2, b = 6$$ we have $$2 | 6$$ because we can find  $$k = 3$$such that $
 **Properties**
 
 * $$a | a, \ 1 | a \text{ and } a | 0$$
-* $$a | b$$ and $$ a | c $$ implies $$a | (b + c)$$
-  * $$3 | 6$$ and $$3 | 9 \Rightarrow 3 | (6 + 9) \iff 3 | 15$$ . We can find $$k = 5$$such that $$15 = 3 \cdot 5$$
+* $$a | b$$ and $$ a | c $$ implies $$a | (bu + cv) \ \forall u, v, \in \mathbb{Z}$$
+  * Example: Let $$b = 6, u = 5$$ and $$c = 9, v = 2 $$
+  * $$3 | 6$$ and $$3 | 9 \Rightarrow 3 | (6 \cdot 5 + 9 \cdot 2) \iff 3 | 48$$ . We can find $$k = 16$$such that $$48 = 3 \cdot 16$$
 * $$a | b$$ and $$ b | c $$ implies $$ a | c$$
+* if $$a|b$$and $$b|a$$ then $$a = \pm b$$
+
+\*\*\*\*
 
 **Definition - Division with remainder**
 
@@ -47,6 +51,36 @@ For $$a = 2, b = 6$$ we have $$2 | 6$$ because we can find  $$k = 3$$such that $
 > There exists **unique** $$q, r \in \mathbb{Z}$$such that $$\boxed{a = bq + r}$$and $$0 \leq r < b$$
 >
 > $$q $$ is called the **quotient** and $$r$$ the **remainder**
+
+**Examples**: 
+
+* To find $$q, r$$ python offers us the `divmod()` function that takes $$a, b$$as arguments
+
+```python
+q, r = divmod(6, 2)
+print(q, r)
+# 3 0 
+
+q, r = divmod(13, 5)
+print(q, r)
+# 2 3 
+# Note that 13 = 2 * 5 + 3
+```
+
+* If we want to find only the quotient $$q$$ we can use the `//` operator
+* If we want to find the remainder $$r$$ we can use the modulo `%` operator
+
+```python
+q = 13 // 5
+print(q)
+# 2
+
+r = 13 % 5
+print(r)
+# 3
+```
+
+Now it's _your_ turn! Play with the proprieties of the division in Python and see if they hold.
 
 ## Greatest common divisor
 
