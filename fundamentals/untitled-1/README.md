@@ -80,7 +80,9 @@ print(r)
 # 3
 ```
 
-Now it's _your_ turn! Play with the proprieties of the division in Python and see if they hold.
+**Exercises**:
+
+1. Now it's _your_ turn! Play with the proprieties of the division in Python and see if they hold.
 
 ## Greatest common divisor
 
@@ -103,4 +105,10 @@ print(gcd(18, 12)) # -> 6
 **Remark:**
 
 * for all other common divisors $$c$$ of $$a, b$$we have $$c | d$$
+
+#### Things to think about
+
+What can we say about numbers$$ a, b$$ with $$\gcd(a, b) = 1$$? How are their divisors?
+
+
 
