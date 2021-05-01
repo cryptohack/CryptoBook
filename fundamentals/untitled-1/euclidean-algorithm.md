@@ -38,6 +38,8 @@ Calculate $$\gcd(24, 15)$$\*\*\*\*
 
 $$24 = 1 \cdot 15 + 9 \\ 15 = 1 \cdot 9 + 6 \\ 9 = 1 \cdot 6 + 3 \\ 6 = 2 \cdot 3 + 0 \Rightarrow 3 = \gcd(24, 15) $$
 
+**Code**
+
 ```python
 def my_gcd(a, b):
     # If a < b swap them
