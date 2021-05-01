@@ -50,6 +50,21 @@ GF(3).algebraic_closure()
 # Algebraic closure of Finite Field of size 3
 ```
 
+```python
+"""
+If you want to find which field an element belongs to you can use the 
+`.parent()` function
+"""
+
+x = 7
+print(x.parent())
+# Integer Ring
+
+y = 3.5
+print(y.parent())
+# Real Field with 53 bits of precision
+```
+
 ### Relation operators
 
 * $$\in$$means is an element of \(belongs to\)
