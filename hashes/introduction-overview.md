@@ -16,6 +16,10 @@ Suppose Alice has a new favourite game and wants to send it to Bob. How can Bob 
 On the internet, when you download, files you often see a number near the download button called the **hash** of that file. If you download that file, recalculate the hash locally and obtain the same hash you can be sure that the data you downloaded is the intended one.
 {% endhint %}
 
+{% hint style="success" %}
+Another use for hashes is storing passwords. We don't want to store plaintext passwords because in case of a breach the attacker will know our password. If we hash them he will have to reverse the hash \(or find a collision\) to use our password. Luckily the hashes are very hard to reverse and collision resistant by definition and construction.
+{% endhint %}
+
 {% hint style="danger" %}
 Note that hashes need a secure channel for communication. Alice must have a secure way to send her hash to Bob. If Eve intercepts Alice's message and hash she can impersonate Alice by changing the file, computing the hash and sending them to Bob. Hashes do not provide **authenticity.**
 {% endhint %}
@@ -24,7 +28,7 @@ Note that hashes need a secure channel for communication. Alice must have a secu
 
 **Definition - Hash**
 
-> A hash is an efficient deterministic function that takes an arbitrary length input and produces a fixed length output \(digest, hash\). Let $$H:\mathcal{M} \longrightarrow \mathcal{T}$$ be a function where
+> A hash is an **efficient deterministic** function that takes an arbitrary length input and produces a fixed length output \(digest, hash\). Let $$H:\mathcal{M} \longrightarrow \mathcal{T}$$ be a function where
 >
 > * $$\mathcal{M}$$ = message space
 > * $$\mathcal{T}$$ = digest space
@@ -34,9 +38,9 @@ Note that hashes need a secure channel for communication. Alice must have a secu
 * Deterministic
 * Fast to compute
 * Small changes change the hash completely
-* Preimage, second preimage, collision resistance \(Explained below\)
+* Preimage, second preimage and collision resistance \(Explained below\)
 
-_Uses_
+_How to use a hash:_
 
 * Suppose you want to check if Alice and Bob have the same version of some file \(**File integrity**\)
   * They compute $$H(a), H(b)$$
