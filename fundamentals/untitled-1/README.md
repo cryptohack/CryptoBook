@@ -4,9 +4,24 @@ description: 'Author: Zademn'
 
 # Division and Greatest common divisor
 
+## Introduction
+
+Two of the skills a cryptographer must master are:
+
+1. Knowing his way and being comfortable to work with numbers.
+2. Understanding and manipulating abstract objects.
+
+This chapter of f**undamentals** proposes to prepare you for understanding the basics of **number theory** and **abstract algebra** .We will start with the most basic concepts such as division and build up knowledge until you, _future cryptographer,_ are able to follow and understand the proofs and intricacies of the cryptosystems that make our everyday life secure.
+
+We will provide examples and snippets of code and be sure to play with them. If math is not your strongest suit, we **highly** suggest to pause and ponder for each concept and take it slow.
+
+For the math-savy people we cover advanced topics in specific chapters on the subjects of number theory and group theory.
+
+_So what are we waiting for? Let's jump right in!_
+
 ## Division
 
-Let $$\mathbb{Z} = \{\dots , -1, 0, 1, 2, 3 \dots \}$$be the set denoting the integers
+Let $$\mathbb{Z} = \{\dots , -1, 0, 1, 2, 3 \dots \}$$be the set denoting the integers.
 
 **Definition - Divisibility**
 
@@ -14,10 +29,15 @@ Let $$\mathbb{Z} = \{\dots , -1, 0, 1, 2, 3 \dots \}$$be the set denoting the in
 >
 > _Notation:_ $$a | b$$
 
+**Example**
+
+For $$a = 2, b = 6$$ we have $$2 | 6$$ because we can find  $$k = 3$$such that $$6 = 2 \cdot 3$$.
+
 **Properties**
 
 * $$a | a, \ 1 | a \text{ and } a | 0$$
 * $$a | b$$ and $$ a | c $$ implies $$a | (b + c)$$
+  * $$3 | 6$$ and $$3 | 9 \Rightarrow 3 | (6 + 9) \iff 3 | 15$$ . We can find $$k = 5$$such that $$15 = 3 \cdot 5$$
 * $$a | b$$ and $$ b | c $$ implies $$ a | c$$
 
 **Definition - Division with remainder**
