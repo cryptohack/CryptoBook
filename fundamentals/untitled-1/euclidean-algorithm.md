@@ -63,6 +63,10 @@ print(my_gcd(24, 15))
 
 ## Extended Euclidean Algorithm
 
+{% hint style="danger" %}
+This section needs to be expanded a bit.
+{% endhint %}
+
 **Bezout's identity**
 
 > Let $$d = \gcd(a, b)$$. Then there exists $$u, v$$ such that $$au + bv = d$$
