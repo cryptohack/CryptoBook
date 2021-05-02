@@ -43,12 +43,6 @@
 * [Reduced Basis](lattices/shortest-vector-problem.md)
 * [Resources and notations](lattices/resources-and-notations.md)
 
-## Block Ciphers
-
-* [AES](block-ciphers/aes/README.md)
-  * [Rijndael Finite Field](block-ciphers/aes/rijndael-finite-field.md)
-  * [Round Transformations](block-ciphers/aes/round-transformations.md)
-
 ## Isogeny Based Cryptography
 
 * [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
@@ -64,4 +58,7 @@
 
 * [Encryption](symmetric-cryptography/encryption.md)
 * [The One Time Pad](symmetric-cryptography/the-one-time-pad.md)
+* [AES](symmetric-cryptography/aes/README.md)
+  * [Rijndael Finite Field](symmetric-cryptography/aes/rijndael-finite-field.md)
+  * [Round Transformations](symmetric-cryptography/aes/round-transformations.md)
 
