@@ -91,10 +91,10 @@ This proof also gives us a handle on the time complexity of the operation. Let$$
 Let $$b_i$$be the output of the LLL algorithm, it turns out that we have the bound
 
 $$
-\left\lVert b_1\right\rVert\leq\left(\frac4{4\delta-1}\right)^{\frac{d-1}2}\lambda_1(L)
+\left\lVert b_1\right\rVert\leq\left(\frac4{4\delta-1}\right)^{\frac{d-1}4}\text{vol}(L)^\frac1d
 $$
 
-which requires $$\delta>\frac14$$. Such bounds for the shortest vector will be elaborated in more detail in the next section.
+which requires $$\delta>\frac14$$. Such bounds for the shortest vector will be elaborated in more detail in the section on reduced basis.
 
 ## Exercises
 

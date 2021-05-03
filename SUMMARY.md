@@ -40,7 +40,13 @@
   * [Gram-Schmidt Orthogonalization](lattices/lll-reduction/gram-schmidt-orthogonalization.md)
   * [Lagrange's algorithm](lattices/lll-reduction/gaussian-reduction.md)
   * [LLL reduction](lattices/lll-reduction/lll-reduced-basis.md)
-* [Reduced Basis](lattices/shortest-vector-problem.md)
+* [Lattice reduction](lattices/shortest-vector-problem/README.md)
+  * [Minkowski reduced](lattices/shortest-vector-problem/minkowski-reduced.md)
+  * [HKZ reduced](lattices/shortest-vector-problem/hkz-reduced.md)
+  * [LLL reduced](lattices/shortest-vector-problem/lll-reduced.md)
+* [Applications](lattices/applications/README.md)
+  * [Coppersmith algorithm](lattices/applications/coppersmith-algorithm.md)
+  * [Extensions of Coppersmith algorithm](lattices/applications/extensions-of-coppersmith-algorithm.md)
 * [Resources and notations](lattices/resources-and-notations.md)
 
 ## Isogeny Based Cryptography
