@@ -11,6 +11,9 @@
 * [Mathematical Notation](fundamentals/notation.md)
 * [Division and Greatest common divisor](fundamentals/untitled-1/README.md)
   * [Euclidean Algorithm](fundamentals/untitled-1/euclidean-algorithm.md)
+* [Modular Arithmetic](fundamentals/modular-arithmetic/README.md)
+  * [Euler-Fermat's Theorem](fundamentals/modular-arithmetic/euler-fermats-theorem.md)
+  * [Quadratic Residues](fundamentals/modular-arithmetic/quadratic-residues.md)
 * [Continued Fractions](fundamentals/continued-fractions.md)
 
 ## Number Theory
