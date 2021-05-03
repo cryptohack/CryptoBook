@@ -25,8 +25,8 @@ Before starting to introducing you RSA, a few arithmetic notions need to be intr
 ### III- Key generation
 
 * We pick two primes $$p$$ and $$q$$
-* Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and it's **Euler's totient** $$\phi(n) = (p-1)*(q-1)$$
-* Now, chose the **public exponent** $$\mathbb{e}$$such as $$\mathbb{gcd(e, \phi(n)) = 1}$$
+* Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and its **Euler's totient** $$\phi(n) = (p-1)*(q-1)$$
+* Now, choose the **public exponent** $$\mathbb{e}$$such as $$\mathbb{gcd(e, \phi(n)) = 1}$$
 * By using the **Extended Euclidean algorithm**, we compute the invert $$\mathbb{d}$$ of $$\mathbb{e \mod n}$$ :$$d \equiv e^{-1} \mod \phi(n)$$ which is our **private exponent**.
 * **Public key**: $$n, e$$
 * **Private key**: $$n, d$$
@@ -35,6 +35,10 @@ Before starting to introducing you RSA, a few arithmetic notions need to be intr
 * We can decrypt a **ciphertext** $$c$$ with $$m \equiv c^d \mod n$$
 
 ### IV- Signature 
+
+A digital signature is a proof of the authenticity of a message, i.e. a proof that the message has not been tampered with. RSA allows us to sign messages by "encrypting" them using the private key, the result being a _signature_ that anyone can verify by "decrypting" it with the public key and comparing it to the  associated message. Any attempt to tamper with the message will result in it no longer matching the signature, and vice-versa. Futhermore, a signature can only be generated using the private key, making it a secure and efficient method of confirming the authenticity of messages. 
+
+Say Alice wants to send a message to Bob, but does not want Mallory, who has established herself as a middleman, to make changes to the message or swap it out entirely. Fortunately, Bob knows Alice's public key, and since $$e$$ and $$d$$ are inverses such that $$ed \equiv 1\mod  \phi(n)$$, Alice can sign her message $$m$$ by "encrypting" it with the private key such that $$s \equiv m^d \mod n$$, where $$s$$ is the signature verifying that the message came from Alice. Alice can now send $$m$$ and $$s$$ to Bob, who is now able to check the authenticity of the message by checking if $$m \equiv s^e \mod n$$. If Mallory tries to change $$m$$, this congruence no longer holds, and since she does not have the private key, she is also unable to provide a maching $$s$$for her tampered message.
 
 ### V- Format
 
