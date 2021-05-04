@@ -28,6 +28,17 @@ On the last row, there is a clear pattern emerging, what's going on??? Let's try
 
 Huh... again? But how? Fermat has the answer!
 
+```python
+p, itworks = 1, True
+for _ in range(100):
+    p = next_prime(p)
+    Fp = GF(p) # Finite Field of size p
+    itworks &= all(Fp(x)^(p-1) == 1 for x in range(1,p))
+
+print(itworks)
+# True
+```
+
 **Fermat's Little Theorem:** Let$$p$$a prime.$$\forall a\in\mathbb Z, a^p\equiv a~[p]$$
 
 > When$$a\neq 0$$, this is equivalent to what we observed:$$\forall a\in\mathbb Z, a^{p-1}\equiv 1~[n]$$. There are several proofs of Fermat's Little Theorem, but perhaps the fastest is to see it as a consequence of the Euler's Theorem which generalizes it. Still, let's look a bit at some applications of this before moving on.
@@ -37,4 +48,6 @@ A first funny thing is the following:$$\forall a\in\mathbb Z, a\cdot a^{p-2}\equ
 {% hint style="info" %}
 TODO: Euler's Theorem
 {% endhint %}
+
+
 
