@@ -1,2 +1,2 @@
-# Euler-Fermat's Theorem
+# Fermat & Euler's Theorem
 

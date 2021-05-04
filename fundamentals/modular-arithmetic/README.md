@@ -1,3 +1,9 @@
+---
+description: >-
+  Authors: A~Z, perhaps someone else but not yet (or they've decided to remain
+  hidden like a ninja)
+---
+
 # Modular Arithmetic
 
 ## Introduction
@@ -8,15 +14,15 @@ Thinking not over the integers as a whole but modulo some integer$$n$$instead ca
 
 For the following chapter, we will assume$$n$$is a natural integer, and$$a$$and$$b$$are two integers. We say that$$a$$and$$b$$are _congruent_ modulo$$n$$when$$n\mid b-a$$, or equivalently when there is an integer$$k$$such that$$a=b+kn$$. We denote this by$$a\equiv b~ [n]$$or $$a \equiv b\mod n$$. I will use the first notation throughout this chapter.
 
-> Remark: When$$b\neq0$$, we have$$a\equiv r~[b]$$, where$$r$$is the remainder in the euclidean division of$$a$$by$$b$$.
+> Remark: When$$b\neq0$$, we have$$a\equiv r~[b]$$, where$$r$$is the remainder in the euclidean division of$$a$$by
 
-  
 This relation has a number of useful properties:
 
 * $$\forall c\in \mathbb Z, a\equiv b~[n] \implies ac \equiv bc ~ [n]$$
 * $$\forall c \in \mathbb Z, a\equiv b~[n] \implies a+c\equiv b+c ~[n]$$
 * $$\forall c \in \mathbb Z, a \equiv b ~[n] \text{ and } b\equiv c~[n]\implies a\equiv c ~[n]$$
 * $$\forall m \in \mathbb N, a\equiv b~[n] \implies a^m\equiv b^m ~[n]$$
+* The proofs are left as an exercise to the reader :p \(Hint: go back to the definition\)
 
 Seeing as addition and multiplication are well defined, the integers modulo$$n$$form a ring, which we note$$\mathbb Z/n\mathbb Z$$. In sage, you can construct such ring with either of the following
 
@@ -41,6 +47,10 @@ power_mod(987654321, 987654321, 7) # Output result as simple integer
 Zmod(7)(84564685)^(2^100) # ^ stands for powering in sage. To get XOR, use ^^.
 # 5
 ```
+
+As a side note, remember that if an equality holds over the integers, then it holds modulo any natural integer$$n$$. This can be used to prove that a relation is never true by finding a suitable modulus, or to derive conditions on the potential solutions of the equation.
+
+Example: by choosing an appropriate modulus, show that not even god is able to find integers$$a$$and$$b$$such that$$a^2 = 2 + 4b$$
 
 ## Modular Inverse
 
