@@ -55,7 +55,7 @@ While this isn't the $$N^{\frac1d}$$bound that we want, this gives us an idea of
 
 ## Achieving the $$N^{\frac1d}$$bound
 
-One important observation to make is that any coefficiens in front of$$N^x$$does not matter as we can simply brute force the top bits of our small root in $$O(1)$$time. Hence we only need to get$$B=O\left(N^{\frac1d}\right)$$.
+One important observation to make is that any coefficients in front of$$N^x$$does not matter as we can simply brute force the top bits of our small root in $$O(1)$$time. Hence we only need to get$$B=kN^{\frac1d}$$for some fixed constant$$k$$.
 
 In order to achieve this, notice that if $$f(x_0)=0\pmod N$$, then $$f(x_0)^h=0\pmod{N^h}$$. This loosens the inequality required for a polynomial to have $$x_0$$as a small root as our modulus is now larger. With this in mind, consider the polynomials
 
@@ -94,20 +94,33 @@ $$
 hence when using the LLL algorithm, the shortest LLL basis vector$$v(Bx)$$has length
 
 $$
-\left\lVert v(Bx)\right\rVert_2=O\left(\text{vol}(L)^{\frac1{\dim(L)}}\right)=O\left(N^{\frac{h+1}2}B^{\frac{dh-1}2}\right)
+\begin{align*}
+\left\lVert v(Bx)\right\rVert_2&=\left(\frac4{4\delta-1}\right)^{\frac{\dim(L)-1}4}\text{vol}(L)^{\frac1{\dim(L)}}\\
+&=\left(\frac4{4\delta-1}\right)^{\frac{dh-1}4}N^{\frac{h+1}2}B^{\frac{dh-1}2}\\
+\end{align*}
 $$
 
-and we need $$\left\lVert v(Bx)\right\rVert_2<O\left(N^h\right)$$for $$v(x_0)=0$$. Hence we have
+and we need $$\left\lVert v(Bx)\right\rVert_2<\frac{N^h}{\sqrt{dh}}$$for $$v(x_0)=0$$. Hence we have
 
 $$
-B=O\left(N^{\frac{h-1}{dh-1}}\right)
+B<\sqrt{\frac4{4\delta-1}}\left(\frac1{dh}\right)^{\frac1{dh-1}}N^{\frac{h-1}{dh-1}}
 $$
 
-Since $$\lim_{h\to\infty}\frac{h-1}{dh-1}=\frac1d$$, this will achieve the $$N^{\frac1d}$$bound that we want. However as for big $$h$$, the LLL algorithm would take a very long time, we typically choose a suitably large$$h$$such that the algorithm is still polynomial in $$\log N,d$$and brute force the remainding bits.
+Since $$\lim_{h\to\infty}\frac{h-1}{dh-1}=\frac1d$$, this will achieve the $$N^{\frac1d}$$bound that we want. However as for big $$h$$, the LLL algorithm would take a very long time, we typically choose a suitably large$$h$$such that the algorithm is still polynomial in $$\log N,d$$and brute force the remaining bits.
 
 ## Exercises
 
- - this is actually optimal \(consider x^2-px mod p^2, B=O\(N^{1/2+\epsilon}\)
+1\) We show that we can indeed find small roots less than$$N^{\frac1d}$$in polynomial time. In the worse case, the longest basis vector cannot exceed $$O\left(B^{dh-1}N^h\right)$$. Hence the LLL algorithm will run in at most$$O(d^6h^6(d+h)^2\log^2N)$$time.
 
- - how to select h
+Let
+
+$$
+\varepsilon=\frac1d-\frac{h-1}{dh-1}\quad h=\frac{d+d\varepsilon-1}{d^2\epsilon}\approx\frac1{d\varepsilon}
+$$
+
+and choose $$\varepsilon=\frac1{\log N}$$, then $$N^\varepsilon$$is a constant hence the number of bits needed to be brute forced is a constant. This gives us the approximate run time of $$O((d+\frac1d\log N)^2\log^8N)$$.
+
+2\) We shall show that this is the best bound we can hope for using lattice methods. Suppose there exists some algorithm that finds roots less than $$O\left(N^{\frac1d+\epsilon}\right)$$in polynomial time. Then consider the case when$$N=p^2$$and $$f(x)=x^2+px$$. Show that this forces the lattice to have a size too big for the algorithm to run in polynomial time, assuming the algorithm finds all small roots.
+
+
 

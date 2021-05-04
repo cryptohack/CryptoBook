@@ -13,7 +13,7 @@ where $$\mu_{i,j}$$is the **Gram-Schmidt coefficients**.
 One can immediately check that this new basis is **orthogonal**, meaning
 
 $$
-\langle b_i^*,b_j^*\rangle=\delta_{i,j}=\begin{cases}0&i\neq j\\1&i=j\end{cases}
+\langle b_i^*,b_j^*\rangle=\begin{cases}0&i\neq j\\\left\lVert b_i^*\right\rVert^2&i=j\end{cases}
 $$
 
 Let $$\mathcal B$$be the matrix where the $$i$$th row is given by $$b_i$$and$$\mathcal B^*$$be the matrix where the $$i$$th row is given by $$b_i^*$$, then the Gram-Schmidt orthogonalization gives us $$\mathcal B=\mu\mathcal B^*$$where $$\mu_{i,i}=1,\mu_{j,i}=0$$and $$\mu_{i,j}$$is the Gram-Schmidt coefficient. As an example, consider the basis of a subspace of $$\mathbb R^4$$:
@@ -59,9 +59,9 @@ Intuitively, this tells us that the more orthogonal a set of basis for a lattice
 
 ## Exercises
 
-1\) Verify that the example is indeed correct.
+1\) Show that the basis $$b_i^*$$is orthogonal.
 
-2\) Show that $$\langle b_i^*,b_j^*\rangle=\delta_{i,j}$$.
+2\) Verify that the output of sage is indeed correct.
 
 3\) Show that $$\mu\mu^T=1$$and $$\mathcal B^*\mathcal B^{*T}$$ is a diagonal matrix whose entries are $$\left\lVert b_i^*\right\rVert$$. Conclude that $$\det\left(\mathcal B\mathcal B^T\right)=\det\left(\mathcal B^*\mathcal B^{*T}\right)=\prod_i\left\lVert b_i^*\right\rVert$$.  
 

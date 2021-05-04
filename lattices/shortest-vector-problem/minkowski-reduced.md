@@ -7,7 +7,7 @@ The basis$$\left\{b_i\right\}_{i=1}^d$$ is **Minkowski-reduced** if $$b_i$$has m
 ## Bounds
 
 $$
-\lambda_i(L)^2\leq||b_i||\leq\min\left\{1,\left(\frac54\right)^{i-4}\right\}
+\lambda_i(L)^2\leq||b_i||^2\leq\min\left\{1,\left(\frac54\right)^{i-4}\right\}\lambda_i(L)^2
 $$
 
 
