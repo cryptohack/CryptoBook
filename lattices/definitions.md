@@ -44,10 +44,10 @@ In the image above, we see the points of a lattice in $$\mathbb R^2$$. The red v
 
 Although the fundamental mesh is not unique, it turns out that the \($$m$$dimensional\) volume of the fundamental mesh is constant for any given lattice. Hence we can define the **volume** of a lattice as the volume of a fundamental mesh. However this definition can be hard to handle hence we provide an equivalent definition via determinants:
 
-Let$$\mathcal L$$be a$$d\times n$$matrix whose rows are given by the basis vectors. Then the volume of a fundamental mesh is given by
+Let$$\mathcal B$$be a$$d\times n$$matrix whose rows are given by the basis vectors. Then the volume of a fundamental mesh is given by
 
 $$
-\text{vol}(L)=\left|\det\left(\mathcal L\mathcal L^T\right)\right|
+\text{vol}(L)=\left|\det\left(\mathcal B\mathcal B^T\right)\right|
 $$
 
 A subset $$X$$of $$\mathbb R^n$$is known as **centrally symmetric** if $$x\in X$$implies $$-x\in X$$. It is convex if for any $$x,y\in X$$, the line joining $$x,y$$ is contained in $$X$$, i.e. $$\left\{tx+(1-t)y|0\leq t\leq1\right\}\subset X$$. Finally we can introduce the most important theorem about lattices, the **Minkowski's Lattice Point Theorem**:

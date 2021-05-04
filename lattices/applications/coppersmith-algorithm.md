@@ -103,14 +103,16 @@ $$
 and we need $$\left\lVert v(Bx)\right\rVert_2<\frac{N^h}{\sqrt{dh}}$$for $$v(x_0)=0$$. Hence we have
 
 $$
-B<\sqrt{\frac4{4\delta-1}}\left(\frac1{dh}\right)^{\frac1{dh-1}}N^{\frac{h-1}{dh-1}}
+B<\sqrt{\frac{4\delta-1}4}\left(\frac1{dh}\right)^{\frac1{dh-1}}N^{\frac{h-1}{dh-1}}
 $$
 
 Since $$\lim_{h\to\infty}\frac{h-1}{dh-1}=\frac1d$$, this will achieve the $$N^{\frac1d}$$bound that we want. However as for big $$h$$, the LLL algorithm would take a very long time, we typically choose a suitably large$$h$$such that the algorithm is still polynomial in $$\log N,d$$and brute force the remaining bits.
 
 ## Exercises
 
-1\) We show that we can indeed find small roots less than$$N^{\frac1d}$$in polynomial time. In the worse case, the longest basis vector cannot exceed $$O\left(B^{dh-1}N^h\right)$$. Hence the LLL algorithm will run in at most$$O(d^6h^6(d+h)^2\log^2N)$$time.
+1\) We often see $$h=\left\lceil\max\left(\frac{d+d\varepsilon-1}{d^2\epsilon},\frac7d\right)\right\rceil$$in literature. We shall now show where this mysterious$$\frac7d$$comes from. The other term will appear in the next exercise. Typically, one sets $$\delta=\frac34$$to simplify calculations involving the LLL algorithm as $$\frac4{4\delta-1}=2$$. Suppose we want $$B>\frac12N^{\frac{h-1}{dh-1}}$$, show that this gives us $$dh\geq7$$.
+
+2\) We show that we can indeed find small roots less than$$N^{\frac1d}$$in polynomial time. In the worse case, the longest basis vector cannot exceed $$O\left(B^{dh-1}N^h\right)$$. Hence the LLL algorithm will run in at most$$O(d^6h^6(d+h)^2\log^2N)$$time.
 
 Let
 
@@ -120,7 +122,7 @@ $$
 
 and choose $$\varepsilon=\frac1{\log N}$$, then $$N^\varepsilon$$is a constant hence the number of bits needed to be brute forced is a constant. This gives us the approximate run time of $$O((d+\frac1d\log N)^2\log^8N)$$.
 
-2\) We shall show that this is the best bound we can hope for using lattice methods. Suppose there exists some algorithm that finds roots less than $$O\left(N^{\frac1d+\epsilon}\right)$$in polynomial time. Then consider the case when$$N=p^2$$and $$f(x)=x^2+px$$. Show that this forces the lattice to have a size too big for the algorithm to run in polynomial time, assuming the algorithm finds all small roots.
+3\) We shall show that this is the best bound we can hope for using lattice methods. Suppose there exists some algorithm that finds roots less than $$O\left(N^{\frac1d+\epsilon}\right)$$in polynomial time. Then consider the case when$$N=p^2$$and $$f(x)=x^2+px$$. Show that this forces the lattice to have a size too big for the algorithm to run in polynomial time, assuming the algorithm finds all small roots.
 
 
 

@@ -22,7 +22,8 @@
 ## Notation
 
 * $$L$$ lattice
-  * $$\mathcal L$$ matrix whose row vectors are a basis for $$L$$
+  * $$\dim(L)$$dimension of lattice
+  * $$\text{vol}(L)$$volume of lattice
 * $$b_i$$ a chosen basis for $$L$$
   * $$\mathcal B$$ matrix whose $$i$$th row vectors is $$b_i$$
 * $$b_i^*$$ Gram-Schmidt orthogonalization of $$b_i$$\(without normalization\)
