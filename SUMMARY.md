@@ -35,6 +35,7 @@
 ## RSA
 
 * [Introduction to RSA](rsa/untitled.md)
+* [Common Modulus Attack](rsa/common-modulus-attack.md)
 
 ## Lattices
 
