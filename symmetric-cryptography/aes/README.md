@@ -11,7 +11,7 @@ Created by Vinent Rijmen and Joan Daemen under the name _Rijndael,_ it won the N
 
 AES encrypts a block of 16 bytes only at a time, though ciphertexts tend to be much longer. To accomodate this, cipherexts are cut in blocks of 16 bytes using an operating mode \[see future section on mode\]. We only focus on the encryption of a single block.
 
-The array of 16 bytes$$(p_0,\ldots,p_{15})$$are arranged from up to bottom, column by column in $$4 \times 4$$matrix. During the encryption, the state of this matrix changes and results in a 16-byte ciphertext$$(c_0,\ldots,c_{15})$$whose output can be read following the same ordering:
+The array of 16 bytes$$(p_0,\ldots,p_{15})$$are arranged from up to bottom, column by column in$$4 \times 4$$matrix. During the encryption, the state of this matrix changes and results in a 16-bytes ciphertext$$(c_0,\ldots,c_{15})$$whose output can be read following the same ordering:
 
 ![AES encryption.](../../.gitbook/assets/figures-figure2.svg)
 

@@ -34,7 +34,7 @@ sage: 1 + 2 == 2 + 1
 True
 sage: 5*(7 + 11) == 5*7 + 5*11
 True
-sage: sum([i for i in range(1000)])^2 == sum([i^3 for i in range(1000)])
+sage: sum(i for i in range(1000))^2 == sum(i^3 for i in range(1000))
 True
 ```
 
