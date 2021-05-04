@@ -29,6 +29,8 @@ This list is **not complete** so please add to it as you see fit.
 * Groups, Rings, Fields, etc.
 * Congruences
 * GCD, LCM
+  * Bézout's Theorem
+  * Gauss' Lemma and its ten thousand corollaries
 * Euclid's algorithm
 * Modular Arithmetic
 * Morphisms et al. 

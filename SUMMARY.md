@@ -9,8 +9,8 @@
 ## Fundamentals
 
 * [Mathematical Notation](fundamentals/notation.md)
-* [Division and Greatest common divisor](fundamentals/untitled-1/README.md)
-  * [Euclidean Algorithm](fundamentals/untitled-1/euclidean-algorithm.md)
+* [Division and Greatest common divisor](fundamentals/division-and-gcd/README.md)
+  * [Euclidean Algorithm](fundamentals/division-and-gcd/euclidean-algorithm.md)
 * [Modular Arithmetic](fundamentals/modular-arithmetic/README.md)
   * [Fermat & Euler's Theorem](fundamentals/modular-arithmetic/euler-fermats-theorem.md)
   * [Quadratic Residues](fundamentals/modular-arithmetic/quadratic-residues.md)
