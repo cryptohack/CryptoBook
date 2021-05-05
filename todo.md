@@ -15,7 +15,7 @@ Write about what you love and this book will be a success.
 {% endhint %}
 
 {% hint style="info" %}
-Descriptions of attacks against crypto systems are strongly encouraged, however full SageMath implementations should not be included, as this has the potential for destroying CryptoHack challenges, or making all attacks known by so many people that CTFs become a total nightmare!! 
+Descriptions of attacks against cryptosystems are strongly encouraged, however full SageMath implementations should not be included, as this has the potential for destroying CryptoHack challenges, or making all attacks known by so many people that CTFs become a total nightmare!! 
 {% endhint %}
 
 ## Proposed topics
