@@ -1,18 +1,31 @@
 # Discrete Log Problem
 
-### Using SageMath to Solve the Discrete Log Problem
+## Discrete log problem
 
-Given the ring \(or field\) $$\mathbb{K}$$ values $$a,b \in \mathbb{K}$$which are related by
+Given any group$$G$$and elements$$a,b$$such that $$a^n=b$$, the problem of solving for$$n$$is known as the disctete log problem \(DLP\). In sage, this can be done for general groups by calling `discrete_log`
 
-$$
-a^x = b \pmod n
-$$
+```python
+sage: G = DihedralGroup(99)
+sage: g = G.random_element()
+sage: discrete_log(g^9,g) # note that if the order of g is less than 9 we would get 9 mod g.order()
+9
+```
 
-we can attempt to compute the value $$x$$using SageMath by calling `b.log(a)`. 
+## Discrete log over $$\left(\mathbb Z/n\mathbb Z\right)^*$$
 
-Depending on the group we consider, SageMath will call different functions internally. This section is devoted to helping the reader understand which functions are called when. We focus here on when we work in the group $$F_n^{\star}$$ for some integer $$n$$. For solving the discrete log problem for points on an elliptic curve, see **\(Missing Resource\).**
+Typically, one considers the discrete log problem in $$\left(\mathbb Z/n\mathbb Z\right)^*$$, i.e. the multiplicative group of integers$$\text{mod }n$$. Explicitly, the problem asks for$$x$$given $$a^x=b\pmod n$$. This can be done by calling `b.log(a)` in sage:
 
-When $$n$$ is composite and not a prime power, `discrete_log()` will be used, which uses generic algorithms to solve DLP \(e.g. Pohlig-Hellman and baby-step giant-step\).
+```python
+sage: R = Integers(99)
+sage: a = R(4)
+sage: b = a^9
+sage: b.log(a)
+9
+```
+
+This section is devoted to helping the reader understand which functions are called when for this specific instance of DLP.
+
+When$$n$$is composite and not a prime power, `discrete_log()` will be used, which uses generic algorithms to solve DLP \(e.g. Pohlig-Hellman and baby-step giant-step\).
 
 When $$n=p$$is a prime, Pari `znlog` will be used, which uses a linear sieve index calculus method, suitable for $$p < 10^{50} \sim 2 ^{166}$$.
 
@@ -64,4 +77,8 @@ time int(pari(f"znlog({int(b)},Mod({int(a)},{int(n)}))"))
 # Wall time: 8.22 s
 # 123456789
 ```
+
+## Discrete log over $$E(k)$$
+
+// elliptic curve discrete log functions
 

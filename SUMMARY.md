@@ -26,10 +26,14 @@
   * [Pollard rho](integer-factorization/pollard-rho.md)
   * [Sieves](integer-factorization/sieves.md)
 
-## Group Theory
+## Abstract algebra
 
-* [Discrete Log Problem](group-theory/untitled.md)
-* [Diffie-Hellman](group-theory/diffie-hellman.md)
+* [Groups](abstract-algebra/groups/README.md)
+  * [Discrete Log Problem](abstract-algebra/groups/untitled.md)
+  * [Diffie-Hellman](abstract-algebra/groups/diffie-hellman.md)
+* [Rings](abstract-algebra/rings.md)
+* [Fields](abstract-algebra/fields.md)
+* [Polynomials](abstract-algebra/polynomials.md)
 
 ## Elliptic Curves
 
