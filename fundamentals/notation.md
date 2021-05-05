@@ -76,7 +76,7 @@ print(y.parent())
 
 ### Operators
 
-* $$Pr(A)$$ means the probability of an event $$A$$to happen. Sometimes denoted as $$P(A)$$
+* $$Pr(A)$$ means the probability of an event $$A$$to happen. Sometimes denoted as $$Pr[A]$$or as $$P(A)$$ 
 
 
 
