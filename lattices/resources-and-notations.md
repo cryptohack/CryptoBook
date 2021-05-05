@@ -19,6 +19,8 @@
 
        Both of these paper introduces the coppersmith algorithm as well as provide some examples
 
+6. Waerden, B. L. \(1956\). Die Reduktionstheorie Der Positiven Quadratischen Formen. Acta Mathematica, 96\(0\), 265–309. doi:10.1007/bf02392364
+
 ## Notation
 
 * $$L$$ lattice
