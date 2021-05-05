@@ -22,6 +22,9 @@
 
 * [Ideals](ideals.md)
 * [Polynomials With Shared Roots](polynomials-with-shared-roots.md)
+* [Integer Factorization](integer-factorization/README.md)
+  * [Pollard rho](integer-factorization/pollard-rho.md)
+  * [Sieves](integer-factorization/sieves.md)
 
 ## Group Theory
 
