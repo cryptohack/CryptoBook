@@ -83,6 +83,15 @@ Mainly thinking things like:
   * [For characteristic 2^n: Example 56](https://www.math.uwaterloo.ca/~ajmeneze/publications/hyperelliptic.pdf)
   * Hyper Metroid example
 
+### Security background
+
+* Basic Concepts 
+  * Confidentiality, Integrity etc
+  * Encryption, Key generation
+* Attacker goals + Attack games
+* Defining Security - Perfect security, semantic security
+* Proofs of security + Security Reductions
+
 ### Asymmetric Cryptography
 
 #### RSA

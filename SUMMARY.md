@@ -72,3 +72,8 @@
   * [Rijndael Finite Field](symmetric-cryptography/aes/rijndael-finite-field.md)
   * [Round Transformations](symmetric-cryptography/aes/round-transformations.md)
 
+## Appendices
+
+* [Sets and Functions](appendices/sets-and-functions.md)
+* [Probability Theory](appendices/probability-theory.md)
+
