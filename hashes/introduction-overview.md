@@ -85,7 +85,7 @@ This propriety prevents an attacker to find the original message from a hash
 >
 > His advantage is $$Pr[\mathcal{A} \text{ finds a second preimage}]$$ where $$Pr(\cdot)$$is a probability
 
-![Figure 2. Security game - second preimage resistance](../.gitbook/assets/image.png)
+![Figure 2. Security game - second preimage resistance](../.gitbook/assets/diagram-20210505-2.svg)
 
 * In practice a hash function with $$l$$ bits output should need $$2^l$$ queries before one can find a second preimage
 * This propriety prevents an attacker to substitute a message with another and get the same hash 
@@ -116,7 +116,7 @@ A hash collision happens when we have two different messages that have the same 
 >
 > His advantage is $$Pr[\text{Adversary finds a collision}]$$
 
-![Figure 3. Security game - Collision resistance](../.gitbook/assets/image%20%282%29.png)
+![Figure 3. Security game - Collision resistance](../.gitbook/assets/diagram-20210505-3.svg)
 
 **Security**
 
@@ -167,5 +167,4 @@ This propriety makes it difficult for an attacker to find 2 input values with th
 #### Bibliography
 
 * Figure 1 - Wikipedia
-* Figure 2, 3 - Cryptography made simple - Nigel Smart
 
