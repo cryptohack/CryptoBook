@@ -26,7 +26,6 @@ This list is **not complete** so please add to it as you see fit.
 
 #### Fundamentals
 
-* Groups, Rings, Fields, etc.
 * Congruences
 * GCD, LCM
   * Bézout's Theorem
@@ -46,10 +45,11 @@ Mainly thinking things like
 * Factoring
 * Legendre / Jacobi symbol
 
-#### Group Theory
+#### Abstract Algebra
 
 Mainly thinking things like:
 
+* Groups, Rings, Fields, etc.
 * Abelian groups and their relationship to key-exchange
 * Lagrange's theorem and small subgroup attacks
 
@@ -61,7 +61,6 @@ Mainly thinking things like:
 * Counting points \(Schoof's algorithm\)
 * Complex multiplication
   * [Good reference, thanks Joachim](https://crypto.stanford.edu/pbc/thesis.pdf)\*\*\*\*
-* Isogenies
 
 **Generating Elliptic Curves**
 
@@ -128,12 +127,6 @@ Mainly thinking things like:
 * ECDSA
 * EdDSA
 
-#### Isogeny Based Cryptography
-
-* SIDH
-* SIKE
-* BIKE
-
 ### Symmetric Cryptography
 
 #### One Time Pad
@@ -151,9 +144,19 @@ Mainly thinking things like:
 * Affine
 * RC4
 
-**Hashes**
+### **Hashes**
 
+* Introduction
 * SHA family
+
+### Isogeny Based Cryptography
+
+* Isogenies
+* Isogeny graphs
+* Torsion poins
+* SIDH
+* SIKE
+* BIKE
 
 ### Cryptographic Protocols
 
