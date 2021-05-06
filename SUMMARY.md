@@ -37,6 +37,7 @@
 ## Elliptic Curves
 
 * [Untitled](elliptic-curves/untitled.md)
+* [Recovering the Modulus](elliptic-curves/recovering-the-modulus.md)
 
 ## Lattices
 
