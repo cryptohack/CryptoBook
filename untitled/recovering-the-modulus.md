@@ -18,7 +18,7 @@ $$
 (M_i,C_i) \text{ for } i \in [1,\infty]
 $$
 
-* public exponent `e` \(e.g. 65537 = 0x10001\)
+* public exponent `e` \(e.g. e = 65537 = 0x10001\)
 
 ## Process
 
@@ -51,7 +51,7 @@ $$
 
 Thus we can calculate for the value $$kN$$, though don't know either value individually - we want to somehow derive $$N$$.
 
-Observe that any two pairings will equate to a value, both with $$N$$ as a factor. We can take the gcd of these two values, and it is probable that the resulting value will be our $$N$$ value, such that:
+Observe that any two pairings will equate to such a value, both with $$N$$ as a factor. We can take the gcd of these two values, and it is probable that the resulting value will be our $$N$$ value, such that:
 
 $$
 N = gcd(C_1 - M_1^e, C_2 - M_2^e)
@@ -78,17 +78,17 @@ $$
 Thus:
 
 $$
-N = gcd(C_1 - M_1^e, C_2 - M_2^e, ..., C_k - M_k^e)
+N = \lim_{k \rightarrow \infty} gcd(C_1 - M_1^e, C_2 - M_2^e, ..., C_k - M_k^e)
 $$
 
 ## Practical Notes
 
 * In reality, you're likely to only need two or three \(plaintext, ciphertext\) pairings \(in the context of ctf challenges and exercises\), and as such computations can be manual if needed, but shouldn't be too complex
-* As it's likely you'll be dealing with large numbers, overflows and precision errors may arise in code - using libraries like gmpy provide support for integers of \(theoretically\) infinite size, and some nice accompanying features too \(like inbuilt gcd and efficient modular exponentiation\)
+* As it's likely you'll be dealing with large numbers, overflows and precision errors may arise in code - using libraries like `gmpy` provide support for integers of \(theoretically\) infinite size, and some nice accompanying features too \(like in-built gcd and efficient modular exponentiation\)
 * These two statements are mathematically equivalent, but one is easier to implement in code:
 
 $$
-gcd(a, b, c, d, ...) = gcd(a, gcd(b, gcd(c, gcd(d, ...)))
+gcd(a, b, c, d, ...) = gcd(a, gcd(b, gcd(c, gcd(d, ...))))
 $$
 
 ## Code Example
