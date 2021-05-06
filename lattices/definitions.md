@@ -64,7 +64,7 @@ Throughout this section, $$\left\lVert v\right\rVert=\sqrt{\sum_iv_i^2}$$ denote
 
 ## Proof sketch of Minkowski's theorem
 
-This proof is by some sort of a piegonhole argument on volumes. Consider the set 
+This proof is by some sort of a pigeonhole argument on volumes. Consider the set 
 
 $$
 \frac12X=\left\{\frac12x|x\in X\right\}
