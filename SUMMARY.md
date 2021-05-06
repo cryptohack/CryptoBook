@@ -37,7 +37,6 @@
 ## Elliptic Curves
 
 * [Untitled](elliptic-curves/untitled.md)
-* [Recovering the Modulus](elliptic-curves/recovering-the-modulus.md)
 
 ## Lattices
 
@@ -62,6 +61,7 @@
 * [RSA](untitled/README.md)
   * [Wiener's Attack](untitled/wieners-attack.md)
   * [Common Modulus Attack](untitled/common-modulus-attack.md)
+  * [Recovering the Modulus](untitled/recovering-the-modulus.md)
 * [Diffie-Hellman](diffie-hellman.md)
 * [Elliptic Curve Cryptography](elliptic-curve-cryptography.md)
 
