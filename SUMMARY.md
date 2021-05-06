@@ -30,7 +30,6 @@
 
 * [Groups](abstract-algebra/groups/README.md)
   * [Discrete Log Problem](abstract-algebra/groups/untitled.md)
-  * [Diffie-Hellman](abstract-algebra/groups/diffie-hellman.md)
 * [Rings](abstract-algebra/rings.md)
 * [Fields](abstract-algebra/fields.md)
 * [Polynomials](abstract-algebra/polynomials.md)
@@ -38,11 +37,6 @@
 ## Elliptic Curves
 
 * [Untitled](elliptic-curves/untitled.md)
-
-## RSA
-
-* [Introduction to RSA](rsa/untitled.md)
-* [Common Modulus Attack](rsa/common-modulus-attack.md)
 
 ## Lattices
 
@@ -60,16 +54,15 @@
   * [Extensions of Coppersmith algorithm](lattices/applications/extensions-of-coppersmith-algorithm.md)
 * [Resources and notations](lattices/resources-and-notations.md)
 
-## Isogeny Based Cryptography
+## Asymmetric Cryptography <a id="asymmetric"></a>
 
-* [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
-* [Isogenies](isogeny-based-cryptography/untitled.md)
-* [Isogeny and Ramanujan Graphs](isogeny-based-cryptography/isogeny-and-ramanujan-graphs.md)
+* [RSA](asymmetric/rsa/README.md)
+  * [Introduction to RSA](asymmetric/rsa/untitled.md)
+  * [Common Modulus Attack](asymmetric/rsa/common-modulus-attack.md)
 
-## Hashes
+---
 
-* [Introduction / overview](hashes/introduction-overview.md)
-* [The Birthday paradox / attack](hashes/the-birthday-paradox-attack.md)
+* [Diffie-Hellman](diffie-hellman.md)
 
 ## Symmetric Cryptography
 
@@ -78,6 +71,17 @@
 * [AES](symmetric-cryptography/aes/README.md)
   * [Rijndael Finite Field](symmetric-cryptography/aes/rijndael-finite-field.md)
   * [Round Transformations](symmetric-cryptography/aes/round-transformations.md)
+
+## Hashes
+
+* [Introduction / overview](hashes/introduction-overview.md)
+* [The Birthday paradox / attack](hashes/the-birthday-paradox-attack.md)
+
+## Isogeny Based Cryptography
+
+* [Introduction to Isogeny Cryptography](isogeny-based-cryptography/introduction-to-isogeny-cryptography.md)
+* [Isogenies](isogeny-based-cryptography/untitled.md)
+* [Isogeny and Ramanujan Graphs](isogeny-based-cryptography/isogeny-and-ramanujan-graphs.md)
 
 ## Appendices
 
