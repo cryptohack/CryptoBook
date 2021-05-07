@@ -1,7 +1,8 @@
 ---
 description: >-
   Tutorial for application with RSA. We are going to use openSSL, openSSH and
-  pycryptodome for key generation, key extraction and some implementation python
+  pycryptodome for key generation, key extraction and some implementation with
+  python
 ---
 
 # RSA application
