@@ -8,6 +8,8 @@ description: >-
 
 {% hint style="warning" %}
 This page is pretty long, probably could be split up
+
+Edit: I haved deleted the last part, application with RSA, and i made a special part for this. Maybe we can do the same with the second part: Arithmetic for RSA.
 {% endhint %}
 
 ### I- Introduction:
@@ -45,52 +47,6 @@ A digital signature is a proof of the authenticity of a message, i.e. a proof th
 Say Alice wants to send a message to Bob, but does not want Mallory, who has established herself as a middleman, to make changes to the message or swap it out entirely. Fortunately, Bob knows Alice's public key, and since $$e$$ and $$d$$ are inverses such that $$ed \equiv 1\mod  \phi(n)$$, Alice can sign her message $$m$$ by "encrypting" it with the private key such that $$s \equiv m^d \mod n$$, where $$s$$ is the signature verifying that the message came from Alice. Alice can now send $$m$$ and $$s$$ to Bob, who is now able to check the authenticity of the message by checking if $$m \equiv s^e \mod n$$. If Mallory tries to change $$m$$, this congruence no longer holds, and since she does not have the private key, she is also unable to provide a maching $$s$$for her tampered message.
 
 ### V- Format
-
-### VI- Application: pycryptodome and openSSL
-
-#### Pycryptodome:
-
-Pycryptodome is a python library about cryptography, see the documentation below: [https://www.pycryptodome.org/en/latest/](https://www.pycryptodome.org/en/latest/) There is an example of RSA key generation with pycryptodome:
-
-```python
-from Crypto.Util.number import getPrime, bytes_to_long
-
-
-def generate_keys():
-    e = 0x10001    #public exponent e, we generally use this one by default
-    while True:
-        p = getPrime(512)
-        q = getPrime(512)
-        phi = (p - 1) * (q - 1)    #Euler's totient 
-        d = pow(e, -1, phi)    #Private exponent d
-        if d != -1:
-            break
-
-    n = p * q
-    public_key = (n, e)
-    private_key = (n, d)
-    return public_key, private_key
-
-
-def encrypt(plaintext: int, public_key) -> int:
-    n, e = public_key
-    return pow(plaintext, e, n)    #plaintext ** e mod n
-
-
-def decrypt(ciphertext: int, private_key) -> int:
-    n, d = private_key
-    return pow(ciphertext, d, n)   #ciphertext ** d mod n
-
-
-message = bytes_to_long(b"super_secret_message")
-public_key, private_key = generate_keys()
-ciphertext = encrypt(message, public_key)
-plaintext = decrypt(ciphertext, private_key)
-```
-
-#### OpenSSL:
-
-OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security \(TLS\) and Secure Sockets Layer \(SSL\) protocols. It is also a general-purpose cryptography library
 
 ## Proof of Correctness
 
