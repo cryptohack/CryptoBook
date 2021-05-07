@@ -2,6 +2,10 @@
 
 ## Overview
 
+{% hint style="danger" %}
+We need to make some changes: separate the explanation from the code, add a subpart about the MITM and maybe to develop more the instructions
+{% endhint %}
+
 Let's say Alice and Bob want to exchange a secret over an insecure channel. In other words, anyone can read the messages they send, but the goal is to ensure that only Alice and Bob can calculate the secret key.
 
 **Diffie-Hellman key exchange** provides a solution to this seemingly impossible task. Since code may be easier to understand than a detailed explanation, I'll provide it first:
