@@ -52,7 +52,7 @@ Let's look if the group axioms are satisfied
 Therefore we can conclude that the integers mod $$n$$ with the modular adition form a group.
 
 ```python
-Z5 = Zmod(5) # Techni
+Z5 = Zmod(5) # Technically it's a ring but we'll use the addition here
 print(Z5.list())
 # [0, 1, 2, 3, 4]
 
