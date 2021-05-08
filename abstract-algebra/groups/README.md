@@ -91,6 +91,8 @@ $$(\mathbb{Z}, \cdot)$$is not a group because we can find elements that don't ha
 
 Is $$(\mathbb{Z} / n \mathbb{Z} \smallsetminus \{0\}, \cdot)$$a group? If yes why? If not, are there values for $$n$$that make it a group?
 
+sɹosᴉʌᴉp uoɯɯoɔ puɐ sǝɯᴉɹd ʇnoqɐ ʞuᴉɥ┴ :ʇuᴉH
+
 ### Proprieties
 
 1. The identity of a group is **unique**
