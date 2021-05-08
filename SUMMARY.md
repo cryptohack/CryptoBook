@@ -29,6 +29,7 @@
 ## Abstract algebra
 
 * [Groups](abstract-algebra/groups/README.md)
+  * [Another take on groups](abstract-algebra/groups/another-take-on-groups.md)
   * [Discrete Log Problem](abstract-algebra/groups/untitled.md)
 * [Rings](abstract-algebra/rings.md)
 * [Fields](abstract-algebra/fields.md)
