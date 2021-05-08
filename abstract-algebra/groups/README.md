@@ -1,5 +1,8 @@
 # Groups
 
+Authors: Ariana, Zademn  
+Reviewed by:
+
 ## Introduction
 
 Modern cryptography is based on the assumption that some **problems** are hard \(unfeasable to solve\). Since the we do not have infinite computational power and storage we usually work with finite messages, keys and ciphertexts and we say they lay in some finite **sets** $$\mathcal{M}, \mathcal{K}$$ and $$\mathcal{C}$$.
@@ -7,13 +10,11 @@ Modern cryptography is based on the assumption that some **problems** are hard \
 Furthermore, to get a ciphertext we usually perform some **operations** with the message and the key.
 
 {% hint style="success" %}
-For example in AES128 $$\mathcal{K} = \mathcal{M} = \mathcal{C} = \{0, 1\}^{128}$$since the input, output and keyspace are 128 bits. We also have the encryption and decryption operations
-
+For example in AES128 $$\mathcal{K} = \mathcal{M} = \mathcal{C} = \{0, 1\}^{128}$$since the input, output and key spaces are 128 bits. We also have the encryption and decryption operations:  
 $$Enc: \mathcal{K} \times \mathcal{M} \to \mathcal{C} \\  Dec: \mathcal{K} \times \mathcal{C} \to \mathcal{M}$$
 {% endhint %}
 
-The study of **sets**, and different types of **operations** on them is the target of _abstract algebra_. 
-
+The study of **sets**, and different types of **operations** on them is the target of _abstract algebra_.   
 In this chapter we will learn the underlying building blocks of cryptosystems and some of the hard problems that the cryptosystems are based on.
 
 ## Definition
@@ -35,16 +36,11 @@ If $$ab=ba$$, then $$\cdot$$is **commutative** and the group is called **abelian
 
 **Examples of groups**
 
-Integers modulo $$n$$ \(remainders\) under modular addition  $$= (\mathbb{Z} / n \mathbb{Z},  +)$$. 
-
-$$\mathbb{Z} / n \mathbb{Z} = \{0, 1, ..., n -1\}$$
-
+Integers modulo $$n$$ \(remainders\) under modular addition  $$= (\mathbb{Z} / n \mathbb{Z},  +)$$.   
+$$\mathbb{Z} / n \mathbb{Z} = \{0, 1, ..., n -1\}$$  
 Let's look if the group axioms are satisfied
 
-1. $$\checkmark$$ $$\forall a, b \in \mathbb{Z}/ n\mathbb{Z} \text{ let }  c \equiv a + b \bmod n$$. 
-
-   Because of the modulo reduction $$c < n \Rightarrow c \in \mathbb{Z}/ n\mathbb{Z} $$ 
-
+1. $$\checkmark$$ $$\forall a, b \in \mathbb{Z}/ n\mathbb{Z} \text{ let }  c \equiv a + b \bmod n$$.  Because of the modulo reduction $$c < n \Rightarrow c \in \mathbb{Z}/ n\mathbb{Z} $$ 
 2. $$\checkmark$$Modular addition is associative
 3. $$\checkmark $$$$0 + a \equiv a + 0 \equiv a \bmod n \Rightarrow 0$$ is the identity element
 4. $$\checkmark$$$$\forall a \in \mathbb{Z}/ n\mathbb{Z} $$we take $$n - a \bmod n$$to be the inverse of $$a$$. We check that
@@ -53,7 +49,7 @@ Let's look if the group axioms are satisfied
 
    $$n - a + a \equiv n \equiv 0 \bmod n$$
 
-Therefore we can conclude that the integers mod $$n$$ with the modular adition form a group.
+Therefore we can conclude that the integers mod $$n$$ with the modular addition form a group.
 
 ```python
 Z5 = Zmod(5) # Technically it's a ring but we'll use the addition here
@@ -83,8 +79,7 @@ print(a + (5 - a))
 
 **Example of non-groups**
 
-$$(\mathbb{Q}, \cdot)$$ is not a group because we can find the element $$0$$ that doesn't have an inverse for the identity $$1$$
-
+$$(\mathbb{Q}, \cdot)$$ is not a group because we can find the element $$0$$ that doesn't have an inverse for the identity $$1$$.  
 $$(\mathbb{Z}, \cdot)$$is not a group because we can find elements that don't have an inverse for the identity $$1$$
 
 **Exercise**
@@ -150,8 +145,7 @@ Let $$m \in \mathcal{M}$$be some message. The order of $$m$$ means how many **di
 
 **Definition**
 
-Let $$(G, \cdot)$$ be a group. We say $$H$$is a subgroup of $$G$$ if $$H$$ is a subset of $$G$$ and $$(H, \cdot)$$forms a group.
-
+Let $$(G, \cdot)$$ be a group. We say $$H$$is a subgroup of $$G$$ if $$H$$ is a subset of $$G$$ and $$(H, \cdot)$$forms a group.  
 Notation: $$H \leq G$$
 
 **Proprieties**
@@ -164,7 +158,7 @@ Notation: $$H \leq G$$
 **How to check** $$H \leq G$$**? Let's look at a 2 step test**
 
 1. Closed under operation: $$\forall a, b \in H \to ab \in H$$
-2. Closed under invrerses: $$\forall a \in H \to a^{-1} \in H$$
+2. Closed under inverses: $$\forall a \in H \to a^{-1} \in H$$
 
 ### Generators
 

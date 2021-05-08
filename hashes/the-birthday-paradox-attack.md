@@ -1,6 +1,6 @@
 # The Birthday paradox / attack
 
-Author: Zademn, ireland  
+Authors: Zademn, ireland  
 Reviewed by: 
 
 **Prerequisites**
@@ -54,11 +54,9 @@ _Solution_
 
 * Event n = Person n is born on a different day than Person   $$1,...,n-1 \Rightarrow$$ $$\Rightarrow Pr(E_n) = \dfrac {365-(n-1)} {365}$$
 
-$$Pr(\bar{A}) = Pr(E1) \cdot Pr(E_2) \cdot \dots \cdot Pr(E_n) = \dfrac {365} {365} \cdot \dfrac {364} {365} \cdot \dots \cdot \dfrac {365-(n-1)} {365} = \left( \dfrac {1} {365} \right) ^{n} \cdot \dfrac {365!} {(365-n)!} = \prod_{i=1}^{n-1} \left(1 - \dfrac i {365}\right)$$
+$$Pr(\bar{A}) = Pr(E1) \cdot Pr(E_2) \cdot \dots \cdot Pr(E_n) = \dfrac {365} {365} \cdot \dfrac {364} {365} \cdot \dots \cdot \dfrac {365-(n-1)} {365} = \left( \dfrac {1} {365} \right) ^{n} \cdot \dfrac {365!} {(365-n)!} = \prod_{i=1}^{n-1} \left(1 - \dfrac i {365}\right)$$\*\*\*\*
 
-
-
-#### **General case**
+### **General case**
 
 **Question 1**
 
@@ -86,9 +84,8 @@ print(same_birthday(23, 365), same_birthday(32, 365), same_birthday(100, 365))
 
 ####  An useful approximation
 
-From the Taylor approximation we know $$e^x = 1 + x + \dfrac {x^2} {2!} + \dots => e_x\approx 1 + x$$ for $$x \ll 1$$
-
-Apply for each event  $$\Rightarrow x = -\dfrac a d \Rightarrow  e^{ -a /d} \approx 1- \dfrac a d \Rightarrow  Pr(A) = 1 - \prod_{i=1}^{n-1}e^{-i/d} = 1-e^{-n(n-1) /{2d}} \approx 1-\boxed{e^{-{n^2} / {2d}}}$$
+From the Taylor approximation we know $$e^x = 1 + x + \dfrac {x^2} {2!} + \dots => e_x\approx 1 + x$$ for $$x \ll 1$$  
+Apply for each event: $$\Rightarrow x = -\dfrac a d \Rightarrow  e^{ -a /d} \approx 1- \dfrac a d \Rightarrow  Pr(A) = 1 - \prod_{i=1}^{n-1}e^{-i/d} = 1-e^{-n(n-1) /{2d}} \approx 1-\boxed{e^{-{n^2} / {2d}}}$$
 
 If we want to solve for $$n$$ knowing $$Pr(A)$$ we take the $$\ln$$ =&gt; $$\boxed{n \approx \sqrt{2d \ln \left(\dfrac 1 {1-Pr(A)}\right)}}$$
 

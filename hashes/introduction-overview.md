@@ -1,7 +1,6 @@
 # Introduction / overview
 
-Author: Zademn
-
+Authors: Zademn  
 Reviewed by: 
 
 ## Introduction
