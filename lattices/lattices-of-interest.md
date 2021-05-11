@@ -6,11 +6,11 @@ Needs review.
 
 ## Introduction
 
-In this chapter we will study some specific types of lattices that appear in cryptography. These will help us understand how certain problems we base  our algorithms on reduce to other hard problems.
+In this chapter we will study some specific types of lattices that appear in cryptography. These will help us understand how certain problems we base  our algorithms on reduce to other hard problems. They will also give insight about the geometry of lattices.
 
 Intuitively, if we have a problem \(1\) in some lattice space we can reduce it to a hard problem \(2\) in another related lattice space. Then if we can prove that if solving problem \(1\) implies solving problem \(2\) then we can conclude that problem \(1\) is as hard as problem \(2\)
 
-Understanding this chapter will strengthen the intuition of what breaking a problem means and how to link it to another hard lattice problem.
+Understanding this chapter will strengthen the intuition for the fututre when we will study what breaking a lattice problem means and how to link it to another hard lattice problem.
 
 ## Dual lattice
 
