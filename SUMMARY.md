@@ -53,6 +53,14 @@
 * [Applications](lattices/applications/README.md)
   * [Coppersmith algorithm](lattices/applications/coppersmith-algorithm.md)
   * [Extensions of Coppersmith algorithm](lattices/applications/extensions-of-coppersmith-algorithm.md)
+* [Hard lattice problems](lattices/hard-lattice-problems.md)
+* [Lattices of interest](lattices/lattices-of-interest.md)
+* [Cryptographic lattice problems](lattices/cryptographic-lattice-problems/README.md)
+  * [Short integer solutions \(SIS\)](lattices/cryptographic-lattice-problems/short-integer-solutions-sis.md)
+  * [Learning with errors \(LWE\)](lattices/cryptographic-lattice-problems/learning-with-errors-lwe.md)
+  * [Ring-LWE](lattices/cryptographic-lattice-problems/ring-lwe.md)
+  * [NTRU](lattices/cryptographic-lattice-problems/ntru.md)
+* [Interactive fun](lattices/interactive-fun.md)
 * [Resources and notations](lattices/resources-and-notations.md)
 
 ## Asymmetric Cryptography <a id="asymmetric"></a>
