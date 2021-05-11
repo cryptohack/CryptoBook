@@ -14,7 +14,7 @@ Understanding this chapter will strengthen the intuition for the fututre when we
 
 ## Dual lattice
 
-Let $$L \subset \mathbb R^n$$be a lattice.  We define the dual of a lattice lattice as the set of all vectors $$y \in span(L)$$ such that $$y \cdot x \in \mathbb Z \ $$for all vectors $$x \in L$$:
+Let $$L \subset \mathbb R^n$$be a lattice.  We define the dual of a lattice as the set of all vectors $$y \in span(L)$$ such that $$y \cdot x \in \mathbb Z \ $$for all vectors $$x \in L$$:
 
 $$
 L^\vee = \{y \in span(L) : y \cdot x \in \mathbb{Z} \ \forall \ x \in L\}
