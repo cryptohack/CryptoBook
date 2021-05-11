@@ -188,8 +188,8 @@ _Intuition:_
 ![](../.gitbook/assets/qary2.svg)
 
 We will now look at 2 more types of lattices that are q-ary. Let $$A \in \mathbb{Z}_q^{n \times m}$$ be a matrix with $$m > n$$. Consider the following lattices:  
-$$L_q(A) = \{y : y = A^Tx \bmod q \in \text{ for some } x \in  \mathbb{Z}^n \} \subset \mathbb{Z^m}$$  
-$$L^\perp_q(A) = \{y : Ay = 0 \bmod q \} \subset \mathbb{Z^m}$$
+$$L_q(A) = \{y \in \mathbb Z^m : y = A^Tx \bmod q \in \text{ for some } x \in  \mathbb{Z}^n \} \subset \mathbb{Z^m}$$  
+$$L^\perp_q(A) = \{y  \in \mathbb Z^m : Ay = 0 \bmod q \} \subset \mathbb{Z^m}$$
 
 _Intuition:_
 
