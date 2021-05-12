@@ -39,7 +39,8 @@ Zmod(11) # or `Integers(11)` or `IntegerModRing(11)`
 # Ring of integers modulo 11
 ```
 
-* We refer to unit groups with the $$R^\times$$ or $$R^*$$. Example: $$(\mathbb Z/n \mathbb Z)^\times$$
+* We refer to unit groups by $$R^\times$$ or $$R^*$$. Example: $$(\mathbb Z/n \mathbb Z)^\times$$
+* We refer to finite fields with $$q$$ elements by $$\mathbb{F}_q$$
 * We refer to a general field by $$k$$
 * We refer to the algebraic closure of this field by $$\bar{k}$$
 
