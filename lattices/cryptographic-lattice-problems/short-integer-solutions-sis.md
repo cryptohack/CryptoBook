@@ -10,10 +10,10 @@ In this section we will study the short integer solution problem and a hashing a
 
 Let $$SIS_{n, m, q, \beta}$$ be a Short Integer Solution problem. We define it as such:
 
-Given $$m$$ uniformly random vectors $$a_i∈\mathbb{Z}^n_q$$, forming the columns of a matrix $$A∈\mathbb{Z}^{n×m}_q$$, find a nonzero integer vector $$z∈\mathbb{Z}^m$$ of norm $$‖z‖ ≤β$$ \(short\) such that 
+Given $$m$$ uniformly random vectors $$a_i∈(\mathbb{Z}/q\mathbb Z)^n$$, forming the columns of a matrix $$A∈(\mathbb{Z}/q\mathbb Z)^{n×m}$$, find a nonzero integer vector $$z∈\mathbb{Z}^m$$ of norm $$‖z‖ ≤β$$ \(short\) such that 
 
 $$
-f_A(z) = Az = \sum_i a_i \cdot z_i = 0 \in \mathbb{Z}^n_q \\ z_1\vec{a_1} + z_2\vec{a_2} +...+ z_m\vec{a_m} = 0
+f_A(z) = Az = \sum_i a_i \cdot z_i = 0 \in (\mathbb{Z}/q\mathbb Z)^n \\ z_1\vec{a_1} + z_2\vec{a_2} +...+ z_m\vec{a_m} = 0
 $$
 
 Without the constraint $$\beta$$ the solution would be as simple as Gaussian elimination. Also we want $$\beta < q$$ otherwise $$z = (q,0, ..., 0) \in \mathbb{Z}^m$$ would be a fine solution.
@@ -37,9 +37,9 @@ Solution existence is based on parameters set. One should think about them as fo
 ## Ajtai's hashing function
 
 * Parameters: $$m, n, q \in \mathbb{Z}$$, $$m > n \log_2 q$$
-* Key: $$A \in \mathbb{Z}_q^{n \times m}$$
+* Key: $$A \in (\mathbb{Z}/q\mathbb Z)^{n \times m}$$
 * Input: $$x \in \{0, 1\}^m \Rightarrow$$ Short vector
-* Output: $$\boxed {f_A(x) = Ax \bmod q}$$ where $$f_A : \{0, 1\}^m \to \mathbb{Z}^n_q$$
+* Output: $$\boxed {f_A(x) = Ax \bmod q}$$ where $$f_A : \{0, 1\}^m \to (\mathbb{Z}/q\mathbb Z)^n$$
 
 ![](../../.gitbook/assets/ajtai2.svg)
 
@@ -47,7 +47,7 @@ Solution existence is based on parameters set. One should think about them as fo
 
 **Compression**
 
-We know $$x \in \{0, 1\}^m \Rightarrow |\mathcal{X}| = 2^n$$ and $$Ax \in \mathcal Y = \mathbb{Z_q^n} \Rightarrow |\mathbb{Z_q^n}| = q^n = (2^{\log q})^n$$. Since we chose $$m > n \log q \Rightarrow |\mathcal{X}| > |\mathcal{Y}| $$.
+We know $$x \in \{0, 1\}^m \Rightarrow |\mathcal{X}| = 2^n$$ and $$Ax \in \mathcal Y = (\mathbb{Z}/q\mathbb Z)^n \Rightarrow |(\mathbb{Z}/q\mathbb Z)^n| = q^n = (2^{\log q})^n$$. Since we chose $$m > n \log q \Rightarrow |\mathcal{X}| > |\mathcal{Y}| $$.
 
 **Collision resistance:**
 
@@ -91,7 +91,7 @@ Formulating as a lattice problem:
 
 Find arbitrary $$t$$ such that $$At = y \bmod q$$
 
-* All solutions to $$Ax = y$$ are of the form $$t + L^{\perp}$$ where $${L}^\perp(A) =  \{x \in \mathbb{Z}^m : Ax = 0 \in \mathbb{Z}^n_q \}$$
+* All solutions to $$Ax = y$$ are of the form $$t + L^{\perp}$$ where $${L}^\perp(A) =  \{x \in \mathbb{Z}^m : Ax = 0 \in (\mathbb{Z}/q\mathbb Z)^n \}$$
 * So we need to find a short vector in $$t + {L}^{\perp}(A)$$
 * Equivalent, find $$v \in {L}^{\perp}(A)$$ closest to $$t$$ \(CVP\)
 

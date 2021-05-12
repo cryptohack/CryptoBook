@@ -168,8 +168,6 @@ print(lnd * l1 > 1)
 
 We've seen that in cryptography we don't like to work with infinite sets \(like $$\mathbb Z$$\) and we limit them to some finite set using the $$\bmod$$ operation \($$\mathbb Z \to \mathbb Z/ q\mathbb{Z}$$\). We will apply the same principle to the lattices so let us define the concept of a q-ary lattice.
 
-**Notation**: I will denote $$\mathbb{Z}/q\mathbb Z$$ with $$\mathbb{Z}_q$$
-
 **Definition:**
 
 For a number $$q \in \mathbb{Z},\  q \geq 3$$we call a lattice **q-ary** if
@@ -187,7 +185,7 @@ _Intuition:_
 
 ![](../.gitbook/assets/qary2.svg)
 
-We will now look at 2 more types of lattices that are q-ary. Let $$A \in \mathbb{Z}_q^{n \times m}$$ be a matrix with $$m > n$$. Consider the following lattices:  
+We will now look at 2 more types of lattices that are q-ary. Let $$A \in (\mathbb{Z}/q\mathbb Z)^{n \times m}$$ be a matrix with $$m > n$$. Consider the following lattices:  
 $$L_q(A) = \{y \in \mathbb Z^m : y = A^Tx \bmod q \in \text{ for some } x \in  \mathbb{Z}^n \} \subset \mathbb{Z^m}$$  
 $$L^\perp_q(A) = \{y  \in \mathbb Z^m : Ay = 0 \bmod q \} \subset \mathbb{Z^m}$$
 

@@ -17,6 +17,7 @@ If you're reading a page and something is new to you, come here and add the symb
 * $$\mathbb{Z}$$: denotes the set of integers
 * $$\mathbb{Q}$$: denotes the set of rational numbers
 * $$\mathbb{N}$$: denotes the set of natural numbers \(non-negative integers\)
+* $$\mathbb{Z}/n\mathbb Z$$: denotes the set of integers mod $$n$$
 
 ```python
 """
@@ -34,8 +35,11 @@ QQ
 # Rational Field
 NN
 # Non negative integer semiring
+Zmod(11) # or `Integers(11)` or `IntegerModRing(11)` 
+# Ring of integers modulo 11
 ```
 
+* We refer to unit groups with the $$R^\times$$ or $$R^*$$. Example: $$(\mathbb Z/n \mathbb Z)^\times$$
 * We refer to a general field by $$k$$
 * We refer to the algebraic closure of this field by $$\bar{k}$$
 
@@ -65,6 +69,26 @@ print(y.parent())
 # Real Field with 53 bits of precision
 ```
 
+```python
+"""
+If you want to "lift" an element from a quotient ring R/I to the ring R
+use the `.lift()` function
+"""
+R = ZZ
+RI = Zmod(11)
+x =  RI(5)
+
+print(x.parent())
+# Ring of integers modulo 11
+
+y = x.lift()
+print(y.parent())
+# Integer Ring
+
+print(y in R)
+# True
+```
+
 ### Relation operators
 
 * $$\in$$means is an element of \(belongs to\)
@@ -72,7 +96,7 @@ print(y.parent())
 ### Logical Notation
 
 * $$\forall$$means for all
-* $$\exists$$means there exists
+* $$\exists$$means there exists. $$\exists!$$ means uniquely exists
 
 ### Operators
 
