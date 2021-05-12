@@ -68,6 +68,7 @@
 ---
 
 * [RSA](untitled/README.md)
+  * [Proof of correctness](untitled/proof-of-correctness.md)
   * [RSA application](untitled/rsa-application.md)
   * [Wiener's Attack](untitled/wieners-attack.md)
   * [Common Modulus Attack](untitled/common-modulus-attack.md)
