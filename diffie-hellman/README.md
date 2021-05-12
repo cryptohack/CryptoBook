@@ -49,7 +49,7 @@ Here's a brief explanation of the code:
 So anybody observing the messages sent between Alice and Bob would see $$p, g, g^a, g^b$$, but they wouldn't be able to calculate the shared key $$g^{ab}$$.
 {% endhint %}
 
-This is because given $$g$$ and $$g^a$$, it should be infeasible to calculate $$a$$. If this sounds familiar, that's because it's the [Discrete Log Problem](abstract-algebra/groups/untitled.md).
+This is because given $$g$$ and $$g^a$$, it should be infeasible to calculate $$a$$. If this sounds familiar, that's because it's the [Discrete Log Problem](../abstract-algebra/groups/untitled.md).
 
 The original paper can be found [here](https://ee.stanford.edu/~hellman/publications/24.pdf). It uses the group of integers modulo a prime to perform the key exchange. In practice however, any group with a hard discrete log problem can be used.
 

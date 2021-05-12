@@ -73,7 +73,8 @@
   * [Wiener's Attack](untitled/wieners-attack.md)
   * [Common Modulus Attack](untitled/common-modulus-attack.md)
   * [Recovering the Modulus](untitled/recovering-the-modulus.md)
-* [Diffie-Hellman](diffie-hellman.md)
+* [Diffie-Hellman](diffie-hellman/README.md)
+  * [MITM](diffie-hellman/mitm.md)
 * [Elliptic Curve Cryptography](elliptic-curve-cryptography.md)
 
 ## Symmetric Cryptography
