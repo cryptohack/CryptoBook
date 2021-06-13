@@ -12,7 +12,9 @@
 * [Division and Greatest common divisor](fundamentals/division-and-gcd/README.md)
   * [Euclidean Algorithm](fundamentals/division-and-gcd/euclidean-algorithm.md)
 * [Modular Arithmetic](fundamentals/modular-arithmetic/README.md)
-  * [Fermat & Euler's Theorems](fundamentals/modular-arithmetic/fermat-euler-theorem.md)
+  * [Theorems of Wilson, Euler, and Fermat](fundamentals/modular-arithmetic/theorems-of-wilson-euler-and-fermat.md)
+  * [Fermat's Little Theorem in Detail](fundamentals/modular-arithmetic/fermat-euler-theorem.md)
+  * [Euler's Theorem in Detail](fundamentals/modular-arithmetic/eulers-theorem-in-detail.md)
   * [Quadratic Residues](fundamentals/modular-arithmetic/quadratic-residues.md)
 * [Continued Fractions](fundamentals/continued-fractions.md)
 

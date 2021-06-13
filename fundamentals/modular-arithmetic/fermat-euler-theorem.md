@@ -2,7 +2,7 @@
 description: Would you like to be an author?
 ---
 
-# Fermat & Euler's Theorems
+# Fermat's Little Theorem in Detail
 
 ## Introduction
 
@@ -48,10 +48,6 @@ print(itworks)
 > When$$a\neq 0$$, this is equivalent to what we observed:$$a^{p-1}\equiv 1~[n]$$. There are several proofs of Fermat's Little Theorem, but perhaps the fastest is to see it as a consequence of the Euler's Theorem which generalizes it. Still, let's look a bit at some applications of this before moving on.
 
 A first funny thing is the following:$$\forall a\in\mathbb Z, a\cdot a^{p-2}\equiv a^{p-1}\equiv 1~[p]$$. When$$p>2$$, this means we have found a non-trivial integer that when multiplied to$$a$$yields 1. That is, we have found the inverse of$$a$$, wow. Since the inverse is unique modulo$$p$$, we can always invert non-zero integers by doing this. From a human point of view, this is really easier than using the extended euclidean algorithm.
-
-{% hint style="info" %}
-TODO: Euler's Theorem
-{% endhint %}
 
 
 
