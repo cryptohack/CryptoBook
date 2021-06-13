@@ -71,6 +71,7 @@
   * [Proof of correctness](untitled/proof-of-correctness.md)
   * [RSA application](untitled/rsa-application.md)
   * [Wiener's Attack](untitled/wieners-attack.md)
+  * [Boneh-Durfee Attack](untitled/boneh-durfee-attack.md)
   * [Common Modulus Attack](untitled/common-modulus-attack.md)
   * [Recovering the Modulus](untitled/recovering-the-modulus.md)
 * [Diffie-Hellman](diffie-hellman/README.md)

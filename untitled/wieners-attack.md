@@ -78,3 +78,34 @@ if __name__ == '__main__':
 
 //TODO: Proof of Wiener's theorem
 
+### Automation
+
+The Python module `owiener` simplifies the scripting process of Wiener's attack:
+
+{% embed url="https://github.com/orisano/owiener" caption="owiener" %}
+
+Here is a Wiener's attack template:
+
+```python
+#!/usr/bin/env python3
+import owiener
+from Crypto.Util.number import long_to_bytes
+
+#--------Data--------#
+
+N = <N>
+e = <e>
+c = <c>
+
+#--------Wiener's attack--------#
+
+d = owiener.attack(e, N)
+
+if d:
+    m = pow(c, d, N)
+    flag = long_to_bytes(m).decode()
+    print(flag)
+else:
+    print("Wiener's Attack failed.")
+```
+
