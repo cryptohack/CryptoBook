@@ -103,7 +103,12 @@ Mainly thinking things like:
   * Håstad's Attack
   * Franklin-Reiter Attack
 * Wiener's Attack
+* RSA's Integer fattorization Attacks
+* * Fermat Factoring Attack
+  * Quadratic Sieve Attack
+  * Number Fielde Sieve Attack
 * RSA Digital Signature Scheme
+* Timing Attacks on RSA
 * RSA with Chinese Remainder Theorem \(CRT\)
   * [Fault Attack on RSA-CRT](https://eprint.iacr.org/2002/073.pdf)
   * [Bellcore Attack \(Low Voltage Attack\)](https://eprint.iacr.org/2012/553.pdf)
@@ -147,7 +152,11 @@ Mainly thinking things like:
 ### **Hashes**
 
 * Introduction
+* Trapdoor Functions
+* MD family
 * SHA family
+* BLAKE Hash family
+* // TODO: Insert Attacks
 
 ### Isogeny Based Cryptography
 
@@ -167,5 +176,24 @@ Mainly thinking things like:
 * Proof of equality of dlog
 * Proof of knowledge of a group homomorphism preimage
 
+#### Formal Verification of Security Protocols
 
+* Definition of Formal Verification
+* Uses of Formal Verification
+* Handshake protocols, flawed protocols
+* The external threat: Man-In-The-Middle attacks
+* Attacking the \(flawed\) Needham-Shroeder public key exchange protocol 
+
+
+
+#### Usefull Resources \( Books, articles ..\) // based on my material
+
+* Cryptanalytic Attacks on RSA \(Yan, Springer, 2008\)
+* Algorithmic Cryptanalysis \(Antoine Joux, CRC Press, 2009\)
+* Algebraic Cryptanalysis \(Brad, Springer, 2009\)
+* RC4 stream Cipher and its variants \(H. Rosen, CRC Press, 2013\)
+* Formal Models and Techniques for Analyzing Security Protocols \(Cortier, IOS Press, 2011\)
+* Algebraic Shift Register Sequences \(Goresky && Klapper, Cambridge Press,  2012\)
+* The Modelling and Analysis of Security Protocols \(Schneider, Pearson, 2000\)
+* Secure Transaction Protocol Analysis \(Zhang && Chen, Springer, 2008\)
 
