@@ -12,7 +12,7 @@ Thinking not over the integers as a whole but modulo some integer$$n$$instead ca
 
 ## Congruences
 
-For the following chapter, we will assume$$n$$is a natural integer, and$$a$$and$$b$$are two integers. We say that$$a$$and$$b$$are _congruent_ modulo$$n$$when$$n\mid b-a$$, or equivalently when there is an integer$$k$$such that$$a=b+kn$$. We denote this by$$a\equiv b~ [n]$$or $$a \equiv b\mod n$$. I will use the first notation throughout this chapter.
+For the following chapter, we will assume$$n$$is a natural integer, and$$a$$and$$b$$are two integers. We say that$$a$$and$$b$$are _congruent_ modulo$$n$$when$$n\mid (b-a)$$, or equivalently when there is an integer$$k$$such that$$a=b+kn$$. We denote this by$$a\equiv b~ [n]$$or $$a \equiv b\mod n$$. I will use the first notation throughout this chapter.
 
 > Remark: When$$b\neq0$$, we have$$a\equiv r~[b]$$, where$$r$$is the remainder in the euclidean division of$$a$$by
 
