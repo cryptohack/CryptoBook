@@ -16,7 +16,7 @@ $$
 \{E, n\} \xrightarrow[d < N^{0.292}]{P} \{d\}
 $$
 
-For example, if we choose $$N = 160523347$$, $$d < 160523347^{0.292}$$, 
+Consider $$d < N^{i}$$for first, see that
 
 $$
 1=ed + \frac{k \phi(N)}{2}\\
@@ -61,7 +61,7 @@ $$
 
 \frac{p+q}{2} < 2\sqrt{N} =2e^{\frac{1}{2\alpha}} \sim \sqrt{e} \\
 
-|k| < \frac{2ed}{\phi{(N)}} \leq\frac{3ed}{N}\less3e^{1+\frac{\alpha+1}{\alpha} \less e^{i}
+|k| < \frac{2ed}{\phi{(N)}} \leq\frac{3ed}{N}< 3e^{1+\frac{\alpha+1}{\alpha}} < e^{i}
 $$
 
 ```text
