@@ -72,7 +72,7 @@ $$
 Now to truly recover the plaintext, we are actually doing:
 
 $$
-C_1^x * (C_2^{-1})^{-y}\ mod\ n
+C_1^x \times (C_2^{-1})^{-y}\ mod\ n
 $$
 
 
