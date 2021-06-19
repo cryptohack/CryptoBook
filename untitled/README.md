@@ -31,7 +31,7 @@ Before starting to introducing you RSA, a few arithmetic notions need to be intr
 ### III- Key generation
 
 * We pick two primes $$p$$ and $$q$$
-* Using $$p$$ and $$q$$, we calculate modulus $$n = p*q$$ and its **Euler's totient** $$\phi(n) = (p-1)*(q-1)$$
+* Using $$p$$ and $$q$$, we calculate modulus $$n = p\times q$$ and its **Euler's totient** $$\phi(n) = (p-1) \times  (q-1)$$
 * Now, choose the **public exponent** $$\mathbb{e}$$such as $$\mathbb{gcd(e, \phi(n)) = 1}$$
 * By using the **Extended Euclidean algorithm**, we compute the invert $$\mathbb{d}$$ of $$\mathbb{e \mod n}$$ :$$d \equiv e^{-1} \mod \phi(n)$$ which is our **private exponent**.
 * **Public key**: $$n, e$$
