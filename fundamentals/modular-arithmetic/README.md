@@ -54,7 +54,7 @@ Example: by choosing an appropriate modulus, show that not even god is able to f
 
 ## Modular Inverse
 
-Since we can multiply, a question arises: can we divide? The answer is yes, under certain conditions. Dividing by an integer$$c$$is the same as multiplying by its inverse; that is we want to find another integer$$d$$such that$$cd\equiv 1~[n]$$. Since$$cd\equiv 1~[n]\iff\exists k\in\mathbb Z, cd = 1 + kn$$, it is clear from [Bézout's theorem](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem) that such an inverse exists if and only if$$\gcd(c, n) = 1$$. Therefore, the _units_ modulo$$n$$are the integers coprime to$$n$$, lying in a set we call the unit group modulo$$n$$: $$\left(\mathbb Z/n\mathbb Z\right)^\times$$
+Since we can multiply, a question arises: can we divide? The answer is yes, under certain conditions. Dividing by an integer$$c$$is the same as multiplying by its inverse; that is we want to find another integer$$d$$such that$$cd\equiv 1~[n]$$. Since$$cd\equiv 1~[n]\iff\exists k\in\mathbb Z, cd = 1 + kn$$, it is clear from [Bézout's Identity](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity) that such an inverse exists if and only if$$\gcd(c, n) = 1$$. Therefore, the _units_ modulo$$n$$are the integers coprime to$$n$$, lying in a set we call the unit group modulo$$n$$: $$\left(\mathbb Z/n\mathbb Z\right)^\times$$
 
 ```python
 Zn = Zmod(10)
@@ -62,8 +62,10 @@ Zn(7).is_unit()
 # True
 Zn(8).is_unit()
 # False
-3 == inverse_mod(7, 10) == 1/Zn(7) == pow(7,-1,10) # The latter is a python built-in
+3 == 1/Zn(7) == Zn(7)^(-1) == pow(7,-1,10) # member of Z/10Z
 # True
+inverse_mod(7, 10) # simple integer
+# 3
 Zn(3)/7
 # 9
 Zn(3)/8
