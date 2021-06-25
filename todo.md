@@ -53,6 +53,13 @@ Mainly thinking things like:
 * Abelian groups and their relationship to key-exchange
 * Lagrange's theorem and small subgroup attacks
 
+#### Basilar Cryptanalysis forms
+
+* Introduction to Cryptanalysis
+* A linear Approach to Cryptanalysis
+* Matsui's Best biases algorithm
+* A Differential Approach to Cryptanalysis
+
 #### Elliptic Curves
 
 * Weierstrass
