@@ -58,7 +58,7 @@ $$
 \text{vol}(X)>2^n\text{vol}(L)
 $$
 
-Then $$X$$contains at one nonzero point of $$L $$. This result is primarily used to prove the existence of lattice vectors.
+Then $$X$$contains at least one nonzero point of $$L $$. This result is primarily used to prove the existence of lattice vectors.
 
 Throughout this section, $$\left\lVert v\right\rVert=\sqrt{\sum_iv_i^2}$$ denotes the $$\ell_2$$norm and $$\langle a,b\rangle=\sum_ia_ib_i$$ denotes the inner product.
 
