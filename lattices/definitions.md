@@ -70,7 +70,7 @@ $$
 \frac12X=\left\{\frac12x|x\in X\right\}
 $$
 
-We have $$\text{vol}\left(\frac12 X\right)>\text{vol}(L)$$, hence the inclusion $$\frac12X\to\mathbb R^n/L$$cannot be injective, hence we can find some $$x_1=x_2+\ell$$, $$x_1,x_2\in\frac12 X,\ell\in L,x_1\neq x_2$$. Hence $$x_1-x_2\in L$$is a nontrivial lattice point.
+We have $$\text{vol}\left(\frac12 X\right)>\text{vol}(L)$$, hence the inclusion $$\frac12X\to\mathbb R^n/L$$cannot be injective, thus we can find some $$x_1=x_2+\ell$$, $$x_1,x_2\in\frac12 X,\ell\in L,x_1\neq x_2$$. Hence $$x_1-x_2\in L$$is a nontrivial lattice point.
 
 ## Exercises
 
@@ -78,11 +78,11 @@ We have $$\text{vol}\left(\frac12 X\right)>\text{vol}(L)$$, hence the inclusion 
 
 * Compute the volume of this lattice
 * Show that $$\mathcal B'=\begin{pmatrix}1&0&1\\0&1&1\end{pmatrix}$$generates the same lattice 
-* Show that each row in$$\mathcal C=\begin{pmatrix}1&0&1\\0&2&2\end{pmatrix}$$is in the lattice but $$\mathcal C$$does not generate the lattice. This is one key difference from the case of linear algebra \(over fields\).
+* Show that each row in $$\mathcal C=\begin{pmatrix}1&0&1\\0&2&2\end{pmatrix}$$is in the lattice but$$\mathcal C$$does not generate the lattice. This is one key difference from the case of linear algebra \(over fields\).
 
-2\) Let$$\mathcal B,\mathcal B'$$be $$d\times n$$matrices whose row vectors are basis for lattices $$L,L'$$. Both lattices are the same iff there exists some $$U\in\text{GL}_d(\mathbb Z)$$such that $$\mathcal B'=U\mathcal B$$. Find $$U$$for problem 1. Note that $$\text{GL}_d(\mathbb Z)$$is the group of invertible matrices with integer coefficients, meaning $$U$$and $$U^{-1}$$has integer coefficients.
+2\) Let$$\mathcal B,\mathcal B'$$be $$d\times n$$matrices whose row vectors are basis for lattices $$L,L'$$. Both lattices are the same iff there exists some $$U\in\text{GL}_d(\mathbb Z)$$ such that $$\mathcal B'=U\mathcal B$$. Find $$U$$for problem 1. Note that $$\text{GL}_d(\mathbb Z)$$is the group of invertible matrices with integer coefficients, meaning $$U$$and $$U^{-1}$$have integer coefficients.
 
-3\) Show that the condition in Minkowski's lattice point theorem is strict, i.e. for any complete lattice$$L$$of dimension$$n$$, we can find some centrally symmetric convex set $$X$$with $$\text{vol}(X)=2^n\text{vol}(L)$$but the only lattice point in $$X$$is the origin.
+3\) Show that the condition in Minkowski's lattice point theorem is strict, i.e. for any complete lattice$$L$$of dimension $$n$$, we can find some centrally symmetric convex set$$X$$with$$\text{vol}(X)=2^n\text{vol}(L)$$but the only lattice point in$$X$$is the origin.
 
 4\*\) Let$$v$$be the shortest nonzero vector for some lattice $$L$$with dimension$$n$$. Show that
 
