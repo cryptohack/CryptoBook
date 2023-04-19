@@ -29,9 +29,9 @@ Solution existence is based on parameters set. One should think about them as fo
 * $$m$$ is set depending from application to application. Usually $$m \gg n$$
 * $$q = \text{poly}(n)$$, think of it as $$q = \mathcal{O}(n^2)$$
 * $$\beta = $$the bound is set depending on application and $$\beta \ll q$$
+* $$\delta_1(L)$$ is the length of the shortest nonzero lattice vector. It is called the _minimum distance of the lattice $$L$$_. 
 
 ### SIS as a SVP problem
-
 // TODO
 
 ## Ajtai's hashing function
@@ -51,9 +51,7 @@ We know $$x \in \{0, 1\}^m \Rightarrow |\mathcal{X}| = 2^n$$ and $$Ax \in \mathc
 
 **Collision resistance:**
 
-{% hint style="danger" %}
-halp here
-{% endhint %}
+We can prove collision resistance by contradiction. Assume an attacker can find a collision such that $$x\neq x' \in \{0,1\}^m:f_A(x)=f_A(x'),$$ $$z:=x-x'$$ is a solution for the corresponding SIS problem. 
 
 **Sage example**:
 
